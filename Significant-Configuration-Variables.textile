@@ -2,11 +2,7 @@ Capistrano's configuration is managed through a set of magic variables. Some onl
 
 Please see the table below for more information:
 
-|| variable name  || meaning |
 |^. :application  | Arbitrary variable, useful to store your application name within | 
-
 |^. :user         | The :user variable is the SSH username you are logging into the servers as. In collaborative development, you might not want to embed your own username here, since other developers might be deploying, too. |
-
 |^. :password     | The :password variable is the SSH password you are logging into the servers with. It should be the password that matches the :user variable. It is generally not a good idea to hard-code this variable into the file, except while you are first getting familiar with Capistrano. It is much better idea to setup SSH public/private keys - in which case this variable does not need to be set at all. |
-
 |^. :scm          | The :scm variable is for specifying the type of source control system you are using. It is set to :subversion by default. It is unnecessary to set it explicitly unless you are using something else. See the [[Source Control]] section for more info. |
