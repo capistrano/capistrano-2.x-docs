@@ -1,0 +1,8 @@
+Capistrano Support is available at the resources below:
+
+ * "Capistrano Google Group":http://groups.google.com/group/capistrano
+ * "Capistrano Documentation Google Group":http://groups.google.com/group/capistrano
+
+ * "Lighthouse App Bug Tracker":http://capistrano.lighthouseapp.com
+
+ * "Capistrano Tags on Stack Overflow":http://stackoverflow.com/questions/tagged/capistrano
