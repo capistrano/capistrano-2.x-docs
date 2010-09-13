@@ -10,47 +10,60 @@ Once you have Ruby 1.8.6 (MRI) with RubyGems installed, type the following comma
 
   gem install capistrano
 
-===Does Capistrano work on Ruby 1.9? JRuby? Rubinius?===
+h3. Does Capistrano work on Ruby 1.9? JRuby? Rubinius?
+
 Capistrano should be working fine on Ruby 1.9. Capistrano may work under JRuby, but hasn't been tested on Rubinius or the other non-MRI rubies. 
 
 (This does not mean your server can't run Rubinius, etc. Just means you must use one of the supported rubies to execute Capistrano tasks on your local machine - the machine you use to control your servers.)
 
-===What does "capifying" mean?===
+h3. What does "capifying" mean?
+
 Capifying is the process of configuring your application to use Capistrano for deployment.
 
-===How do I "capify" a rails application?===
+h3. How do I "capify" a rails application?
+
 Make sure you're in the root of the application, and type: "capify ." This will create two files: ./Capfile and ./config/deploy.rb
 
-===What is a Capfile?===
+h3. What is a Capfile?
+
 "Capfile" is to Capistrano as "Rakefile" is to Rake, and "Makefile" is to make. It is the file that cap (Capistrano's command-line client) will try to find and load by default.
 
-===What is the purpose of the ./config/deploy.rb file in a Rails application?===
+h3. What is the purpose of the ./config/deploy.rb file in a Rails application?
+
 Rails conventions dictate that all configuration should go under the config/ directory. So the default Capfile will mostly just load the default deployment recipes, and then load "config/deploy.rb" You could get away with just using Capfile, and deleting config/deploy.rb.
 
-==Standard Variables==
+h2. Standard Variables
 
-===What is the :application variable?===
+h3. What is the :application variable?
+
 The :application variable isn't used for much, but is handy for identifying which app is being deployed.
 
-===What is the :user variable?===
+h3. What is the :user variable?
+
 The :user variable is the SSH username you are logging into the servers as. In collaborative development, you might not want to embed your own username here, since other developers might be deploying, too.
 
-===What is the :password variable?===
+h3. What is the :password variable?
+
 The :password variable is the SSH password you are logging into the servers with. It should be the password that matches the :user variable. It is generally not a good idea to hard-code this variable into the file, except while you are first getting familiar with Capistrano. It is much better idea to setup SSH public/private keys [TODO - add link] - in which case this variable does not need to be set at all.
 
-===What is the :scm variable?===
+h3. What is the :scm variable?
+
 The :scm variable is for specifying the type of source control system you are using. It is set to :subversion by default. It is unnecessary to set it explicitly unless you are using something else. See the 'Source Control' section below for more info.
 
-===What is the :scm_username variable?===
+h3. What is the :scm_username variable?
+
 The :scm_username variable is the username that your source control system (for ex: subversion) will use to access the repository.
 
-===What is the :scm_password variable?===
+h3. What is the :scm_password variable?
+
 The :scm_password variable is the password that your source control system (for ex: subversion) will use to access the repository. It is generally not a good idea to hard-code this variable into the file, except while you are first getting familiar with Capistrano. It is a better idea to cache the credentials on your server once, after which a password is not required. (svn specific) [TODO - add link on how to cache SVN credentials]
 
-===What is the :repository variable?===
+h3. What is the :repository variable?
+
 The :repository variable is the url of the repository that hosts our code.
 
-===What is the :local_repository variable?===
+h3. What is the :local_repository variable?
+
 The :local_repository variable is the repository URL that should be used when querying from the local host. If this is set, :repository, becomes the URL that should be used when querying the repository from the remote hosts. This is handy when your accessing the repository via different methods locally vs. remotely. For example:
 
   set :repository, "file:///var/svn/repos/my_app"
@@ -58,24 +71,26 @@ The :local_repository variable is the repository URL that should be used when qu
 
 In this case, on the remote server, the repository is local and file-based. On your development machine, you are accessing it via svn+ssh.
 
-===What is the :deploy_to variable?===
+h3. What is the :deploy_to variable?
 
 The :deploy_to variable is where we're going to be deploying the application to.
 
 For example:
 
- /var/www/vhosts/yoursite/
+  /var/www/vhosts/yoursite/
 
 This defaults to:
 
- /u/apps/
+  /u/apps/
 
-===What is the :use_sudo variable?===
+h3. What is the :use_sudo variable?
+
 The :use_sudo variable tells the default deployment recipes whether we want to use "sudo" or not. "sudo" is a unix tool for executing commands as the root user. To use it, your user must have sudo access enabled. If you're using shared hosting where sudo access may not be enabled for your user, in which case you should set :use_sudo to false. In general, if you can get away without using it, you should avoid it. For example, 37signals now uses a system where they have a special deployment user, and always deploy as that user. 37signals no longer uses sudo for general deploys.
 
-<pre>:use_sudo, false</pre>
+   :use_sudo, false
 
-===How can I prompt for a variable in a cap script when I run it? (instead of embedding it directly)===
+h3. How can I prompt for a variable in a cap script when I run it? (instead of embedding it directly)
+
 You could prompt for it, using:
 
   set(:user) { Capistrano::CLI.ui.ask("User name: ") }
