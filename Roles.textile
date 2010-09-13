@@ -40,7 +40,7 @@ h2. Alternative Synax
 
 role() can also take a block, it is expected to return the options hash that would otherwise be expected.
 
-In addition to role() there is also server() which is for defining an individual server, and speficying a role; there are circumstances when this is prefereable.
+In addition to role() there is also "server()":http://rdoc.info/rdoc/capistrano/capistrano/blob/515db3a0dec421d1c2200316ab58d7704176d577/Capistrano/Configuration/Roles.html#server-instance_method which is for defining an individual server, and speficying a role; there are circumstances when this is prefereable.
 
 h2. Servers playing multiple roles.
 
