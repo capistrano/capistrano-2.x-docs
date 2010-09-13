@@ -1,0 +1,8 @@
+It is recommended, for security and convenience that you deploy using SSH keys.
+
+This will afford you a few very useful conveniences; notably you won't have to remember passwords for all of your servers.
+
+Here is a little background reading which is important. Archlinux's tutorial is a great primer.
+
+* ["SSH Key Tutorial at Archlinux":http://wiki.archlinux.org/index.php/Using_SSH_Keys]
+* If you are using windows, this is also invaluable. ["SSK keys with PuTTY Pagent":http://e-articles.info/e/a/title/How-to-use-PuTTY-Passphrase-Agents/]
