@@ -3,6 +3,6 @@ The simplest capistrano task would look like this, note there is nothing happeni
 <pre>
 desc "Print out the local time on the system"
 task :time do
-   puts Time.now.to_s
+  puts Time.now.to_s
 end
 </pre>
