@@ -20,4 +20,4 @@ h2. Source Repository
 
 You can find us on GitHub at:
 
-    * http://www.github.com/capistrano/capistrano
+    * "http://www.github.com/capistrano/capistrano":http://www.github.com/capistrano/capistrano
