@@ -25,5 +25,5 @@ The modifiers can be set in the following way:
 
 <pre>
 role :db, 'db1.example.com', :primary => true, :no_release => false
-role :db, %w{db2.example.com db3.example.com}, :no_release => false
+role :db, %w{db2.example.com db3.example.com}, :no_release => true
 </pre>
