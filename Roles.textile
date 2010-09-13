@@ -16,7 +16,7 @@ Notice that the role() method can take an array. You can read more in the API do
 
 h2. Modifiers
 
-The default recipe knows about two **modifiers**. That's to say extra configuration options that can be passed to role() to be used when speficing tasks.
+The default recipe knows about two **modifiers**. That's to say extra configuration options that can be passed to role() to be used when specifying tasks.
 
 |^. <code>:primary</code> | <code>true</code> or <code>false</code>. Used by the database related tasks to determine where to run migrations |
 |^. <code>:no_release</code> | <code>true</code> or <code>false</code> Used by the code checkout tasks to determine where to install the code. Anything set <code>:no_release</code> will not checkout the code from the repository. |
