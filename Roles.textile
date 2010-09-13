@@ -31,3 +31,29 @@ role :db, %w{db2.example.com db3.example.com}, :no_release => true
 In the above example <code>db1</code> will recieve the code during the checkout due to <code>:no_release => false</code> (which is the default, or a no-op at least if it's not true). Due to the <code>:primary => true</code> modifier the database migrations will be run here.
 
 On the other <code>db</code> servers, no migrations will take place, and no code will be released. This is perfect for isolating your databse slaves away from any code responsibility, or having to have a Ruby stack installed.
+
+h2. Defining your own roles.
+
+You can select any artibrary name which isn't already reserved for your role names. The default recipe will ignore them but when writing your own tasks you can define your own modifiers and role names
+
+h2. Alternative Synax
+
+role() can also take a block, it is expected to return the options hash that would otherwise be expected.
+
+In addition to role() there is also server() which is for defining an individual server, and speficying a role; there are circumstances when this is prefereable.
+
+h2. Servers playing multiple roles.
+
+It is perfectly acceptable to have servers playing multiple roles:
+
+<pre>
+role :app, 'example.com'
+role :web, 'example.com'
+role :db, 'example.com', :primary => true
+</pre>
+
+However this is a nice use-case for the server() method, as you could simply write
+
+<pre>
+server 'example.com', [:app, :web, :db], :primary => true
+</pre> 
