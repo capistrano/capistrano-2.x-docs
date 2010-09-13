@@ -97,17 +97,18 @@ You could prompt for it, using:
 
 Giving a block to a variable causes the value of the variable to be deferred. The block will be called the first time the variable is requested, and the value returned by the block will be cached as the new value of the variable.
 
-==Available Variables==
+h2. Available Variables
 
-=== What is the current_path variable ===
+h3.  What is the current_path variable 
 
-=== What is the release_path variable ===
+h3.  What is the release_path variable 
 
-=== What is the version variable ===
+h3.  What is the version variable 
 
-==Roles==
+h2. Roles
 
-===What are roles?===
+h3. What are roles?
+
 [['''Roles'''|Role]] are named sets of servers that you can target your tasks to execute against. Capistrano starts with three roles by default, :app, :web, and :db. Declare roles like follows:
 
   role :app, "your app-server here" 
@@ -120,22 +121,28 @@ In a single server setup, all three roles will point to the same server hostname
   role :web, "www.myserver.com" 
   role :db,  "www.myserver.com", :primary => true
 
-===What is the :app role?===
+h3. What is the :app role?
+
 For a Rails application, the :app role is where your ruby/rails daemons are run from.
 
-===What is the :web role?===
+h3. What is the :web role?
+
 This is for defining which server(s) are running your front-end web server or load-balancing proxy server. A few examples include Apache, Nginx, Pound, HAProxy. If you have a separate box handing the incoming web requests and delegating them out to one or more app servers, this is the role to use.
 
-===What is the :db role?===
+h3. What is the :db role?
+
 Currently the :db role is simply for telling capistrano which server should be used to run Rails migrations. By setting a server to role of :db with :primary => true, Capistrano will run migrations on only this box. The :db role is not intended to be used for a separate database server which is not running Rails application code.
 
-===What is the :primary option used for with the :db role?===
+h3. What is the :primary option used for with the :db role?
+
 The :primary => true option on the :db role tells capistrano this server is the server from which to run Rails migrations.
 
-===Which tasks get executed for which roles?===
+h3. Which tasks get executed for which roles?
+
 By default, a [['''task'''|Task]] will execute on all servers in all roles.
 
-===How do I make a task that only applies to a specific role?===
+h3. How do I make a task that only applies to a specific role?
+
 Use the :roles option when defining the task, for example:
 
   task :sweet_libs_only_task, :roles => :libs do
@@ -143,39 +150,48 @@ Use the :roles option when defining the task, for example:
     # be executed for :libs servers
   end
 
-===How do I make a custom role?===
+h3. How do I make a custom role?
+
 Use the "role" keyword, followed by a symbolic name for your role, followed by one more servers. Use the following syntax in your capistrano script:
 
   role :libs, "www.capify.org" # Creates a :libs role which targets a single server
   role :memcached, "cache1.capify.org", "cache2.capify.org" # Creates a :memcached role which targets multiple servers
 
 
-==Command Line Options==
+h2. Command Line Options
 
-===How do I get a terse list of command line options?===
+h3. How do I get a terse list of command line options?
+
 At the command prompt, type "cap -h"
 
-===How do I get a verbose list of command line options?===
+h3. How do I get a verbose list of command line options?
+
 At the command prompt, type "cap -H"
 
-===How do I get a list of available tasks?===
+h3. How do I get a list of available tasks?
+
 At the command prompt, in the root of your project directory (or wherever your Capfile is), type "cap -T". This will only show documented tasks that are not flagged as "internal".
 
-===How do I get a full list of tasks including internal or undocumented tasks?===
+h3. How do I get a full list of tasks including internal or undocumented tasks?
+
 At the command prompt, in the root of your project directory (or wherever your Capfile is), type "cap -Tv"
 
-===How do I learn more about a specific task?===
+h3. How do I learn more about a specific task?
+
 The best way is to read the source code. But if the developer has included an extended description of the task, you can output this info in the terminal window by typing "cap -e task_name". For example, "cap -e deploy"
 
-===How do I use a Capfile at a different location than my current directory?===
+h3. How do I use a Capfile at a different location than my current directory?
+
 If you want to specify the location to the capfile, use the -f flag. For example: "cap -f /home/demo/SpecialCapFile deploy"
 
-===How do I tell what version of Capistrano I'm running?===
+h3. How do I tell what version of Capistrano I'm running?
+
 At the command prompt, type "cap -V".
 
-==Standard tasks==
+h2. Standard tasks
 
-===How do I verify the dependencies on the server?===
+h3. How do I verify the dependencies on the server?
+
 The Capistrano task "deploy:check" is like asking "does it look safe to deploy?" It checks things like directory permissions, necessary utilities, and so forth, reporting on the things that appear to be incorrect or missing. This is good for making sure a deploy has a chance of working before you actually run "cap deploy".
 
 If your server fails a dependency check, you will get a message like:
@@ -192,16 +208,20 @@ If your server passes all dependency checks, you will get a message like:
   You appear to have all necessary dependencies installed
 
 
-===How do I define my own dependencies?===
+h3. How do I define my own dependencies?
+
 You can define your own dependencies using the "depend" method:
 
   depend :remote, :gem, "tzinfo", ">=0.3.3"
   depend :local, :command, "svn"
   depend :remote, :directory, "/u/depot/files"
 
-Depend takes a "location" argument (:remote or :local), a "type" argument - (:gem, :command, directory), and one or more additional arguments depending on the context. [TODO - Looked up depend(location, type, *args) doc - what are all of the options for location, type, and arguments? Not documented fully in rdoc.]
+Depend takes a "location" argument (:remote or :local), a "type" argument - (:gem, :command, directory), and one or more additional arguments depending on the context. 
 
-===How do I setup the default Capistrano directory structure on my server?===
+  [TODO - Looked up depend(location, type, args) doc - what are all of the options for location, type, and arguments? Not documented fully in rdoc.]
+
+h3. How do I setup the default Capistrano directory structure on my server?
+
 Use the "deploy:setup" task. At the command prompt, at the root of your project, type "cap deploy:setup". This will create the following directory structure:
 
   (deploy_to)/
@@ -211,10 +231,12 @@ Use the "deploy:setup" task. At the command prompt, at the root of your project,
   (deploy_to)/shared/pids
   (deploy_to)/shared/log
 
-===Is it safe to run deploy:setup multiple times?===
+h3. Is it safe to run deploy:setup multiple times?
+
 In general, cap deploy:setup is non-destructive, and is safe to invoke as many times as needed, say, if you are adding a new server or two to the mix.
 
-===How do I prepare the database?===
+h3. How do I prepare the database?
+
 Currently Capistrano does not automate this process for you by default. It may include some facility for doing so in the future. So, you will need to login and actually create your database. Assuming you are using MySQL and it is already set up on your server, just log in, then log into MySQL, and use CREATE DATABASE to create a database with the same name as your user name. For example:
 
   $ ssh <user>@yourserver.org
@@ -227,12 +249,15 @@ Currently Capistrano does not automate this process for you by default. It may i
   Bye
   yourserver.org$ exit
 
-===How does Capistrano know how to "start" my application?===
+h3. How does Capistrano know how to "start" my application?
+
 When you first deploy your application, Capistrano needs to know how to "spin up" your application (start fastcgi, mongrel, thin, etc.) To start your application, Capistrano expects to execute a "script/spin"  file on your server, which you must create and check in to your repository. You could also just override the deploy:start task, but if you do that, you must always start your application via Capistrano, since the start logic does not exist on the remote servers. (Sometimes you might want to manually rekick the listeners on one of the servers; in that case, it's nice to have a "script/spin" script file handy.)
 
-Ruby on Rails Specific:
+h4. Ruby on Rails Specific:
+
 Rails does most of the work for us with the existing "script/process/spawner" script. Let's make the "script/spin" script simply call the "script/process/spawner" script. In your local development copy, create a script file named "spin" and place it in the "script" directory of your app. It should contain the following:
 
+<pre><code>
   #!/bin/sh
   /var/www/your_app/current/script/process/spawner \
     mongrel \
@@ -240,6 +265,7 @@ Rails does most of the work for us with the existing "script/process/spawner" sc
     --instances=1 \
     --address=127.0.0.1 \
     --port=#{port}
+</code></pre>
 
 Then mark this file as executable:
 
@@ -262,21 +288,24 @@ Notes:
 * The spin script is a shell (typically bash) script, not Ruby, and not Capistrano DSL.
 * This file should be created locally and checked in to your repository. It will wind up on your servers when you deploy.
 
-==Custom Tasks==
+h2. Custom Tasks
 
-===How do I write custom tasks?===
+h3. How do I write custom tasks?
+
 Define a task with the "task" keyword, followed by a symbol, and a block containing the commands it should execute using either the [['''run'''|Run]] or [['''sudo'''|Sudo]] command. For example:
 
   task :touch_restart_file do
     run "touch /tmp/restart.txt" # will execute remotely on your server(s)
   end
 
-===How do I execute a custom task?===
+h3. How do I execute a custom task?
+
 If you want to run a custom task on your server(s) independently of your other cap tasks, simply run it with the cap command.
 
   $ cap touch_restart_file
 
-===How do I "hook" in my methods to run before or after standard deployment tasks?===
+h3. How do I "hook" in my methods to run before or after standard deployment tasks?
+
 You may wish for your custom tasks to piggy back onto the standard deployment script to do any custom work needed to deploy your app. This is
 easily done using "before" or "after" hooks. This is best illustrated with an example:
 
@@ -294,10 +323,12 @@ This will run the tasks in the following order:
 
   :prepare_app -> deploy:update_code -> :do_foo -> :do_bar
 
-==Source Control==
+h2. Source Control
+
 Capistrano is (at least by default) highly dependent on your source control system. In general, it is good practice to use some kind of source code management even for anything you are wanting to deploy.
 
-===What if I'm not using Subversion?===
+h3. What if I'm not using Subversion?
+
 Capistrano comes prepackaged with the ability to interface with many different source control systems. By default, Capistrano is setup to use Subversion. To use a different source control system, specify it by setting the :scm variable:
 
   set :scm, :git
@@ -316,7 +347,8 @@ The available options for :scm include:
 
 Each source control system may have some extra, system-specific variables that may need to be set as well. Consult the Capistrano rdoc for these.
 
-===What are deployment "strategies"?===
+h3. What are deployment "strategies"?
+
 A deployment strategy is the method capistrano uses to get code from your source control system to your server(s). The default "checkout" strategy works well enough as a default, but sometimes it either is insufficient, too slow, or not possible at all. For instance, if the source repository is not accessible from the deployment machine, you'll need to find a different way to deploy.
 
 Capistrano lets you define different deployment strategies to handle this.
@@ -334,7 +366,8 @@ The available options for :deploy_via include:
 
 Each deployment strategy may have some extra, strategy-specific variables that may need to be set as well. Consult the Capistrano rdoc for these.
 
-==Updating and Rolling Back==
+h2. Updating and Rolling Back
+
 Once you've run "cap deploy" a few times, you'll have directory structure that looks similar to this:
 
   (deploy_to)/
@@ -348,31 +381,37 @@ Once you've run "cap deploy" a few times, you'll have directory structure that l
 
 Each timestamped directory within the "releases" directory is a copy of your code as-of that date and time. The "current" directory is a symlink to the latest release.
 
-===Why are all app releases on the servers file system?===
+h3. Why are all app releases on the servers file system?
+
 This allows us to roll back to a previous release if we ever deploy a lemon.
 
-===Why does Capistrano put new releases in a separate directory and symlink to them?===
+h3. Why does Capistrano put new releases in a separate directory and symlink to them?
+
 Deploys are mostly atomic that way. You don't muddy up a perfectly good release with new files; instead, you push the new files to their own directory, and when everything is ready, you switch over to the new release by updating the symlink. 
 
-===What is the (deploy_to)/current/REVISION file and why is it useful?===
+h3. What is the (deploy_to)/current/REVISION file and why is it useful?
+
 It holds the current revision number for the deployed release. This is useful because - a) it knows which version to rollback to if necessary, b) it helps to know which code is deployed when diagnosing issues, and c) it can also be used to do diffs, to see what hasn't been deployed yet.
 
-===How can I tell what changes have been made since my last deploy?===
+h3. How can I tell what changes have been made since my last deploy?
+
 You can get a commit log of changes that have occurred since the last deploy using the "cap deploy:pending" command. Sometimes the log isn't helpful enough. Sometimes you want to see the actual diff of what's changed. Easy enough: "cap deploy:pending:diff". That'll show you the diff between what's been deployed, and what's in the repository.
 
-===What happens when a deploy goes bad? How can I switch back to the previously deployed version?===
+h3. What happens when a deploy goes bad? How can I switch back to the previously deployed version?
+
 Ideally just call "cap deploy:rollback", but this is not quite enough currently, for mongrel-based rails apps. What deploy:rollback does is switch the symlink to the previous version, DELETES the bad version, and then restarts the application. Sadly, when mongrel tries to restart, it sees that it's working directory is no longer valid (since it's been deleted) and dies. This will be addressed in a future version of Capistrano (2.4.3 at the time this was written). In the meantime, we can work around this by just calling deploy:start at the same time: "cap deploy:rollback deploy:start".
 
-'''Note:''' It is not possible, in general, for a database migration to be fully reversible. So capistrano cannot assume that your migrations can be reversed
+*Note*: It is not possible, in general, for a database migration to be fully reversible. So capistrano cannot assume that your migrations can be reversed
 
-==Other==
+h2. Other
 
-===Where is a good place to store passwords?===
+h3. Where is a good place to store passwords?
+
 Generally, it is not a good idea to store passwords in your code repository. Production passwords are especially inappropriate. 
 
-'''Best practice:''' put the production password config file somewhere on each server, and then copy it to the release directory on each deploy.
+*Best practice*: put the production password config file somewhere on each server, and then copy it to the release directory on each deploy.
 
-'''Ruby on Rails Specific:'''
+h4. Ruby on Rails Specific:
 
 Here is task for generating your production database.yml file when you run "cap deploy:setup". It will prompt you for the production password and then
 generate a YAML file at (deploy_to)/shared/config/database.yml
@@ -397,12 +436,14 @@ This task will then copy your database yaml file from the shared directory to th
   end
   after "deploy:update_code", :copy_production_database_configuration
 
-===How can I get Capistrano to prompt before executing each command?===
+h3. How can I get Capistrano to prompt before executing each command?
+
 Use the "-d" (debug switch), which tells cap to prompt before executing each command. This is a >=2.4 version feature. It's a great way to debug a task, but it's also great for learning how a task works. For example:
 
   $ cap -d deploy
 
-===How can I tunnel SSH connections through a "gateway" server? Why would I want/need to?===
+h3. How can I tunnel SSH connections through a "gateway" server? Why would I want/need to?
+
 First, consider the case where the servers you need to deploy to are behind a firewall. There is one server you can SSH to from the outside, and from that server you can then SSH to the others. Such a server is sometimes called a DMZ. Capistrano calls it a "gateway", since it can be used to tunnel connections to the servers behind it. To tell Capistrano to tunnel connections through a gateway, just set the :gateway variable:
 
   set :gateway, "gateway.host"
