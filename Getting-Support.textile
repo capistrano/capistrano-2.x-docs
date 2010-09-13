@@ -1,11 +1,9 @@
 Capistrano Support is available at the resources below:
 
  * "Capistrano Google Group":http://groups.google.com/group/capistrano
- * "Capistrano Documentation Google Group":http://groups.google.com/group/capistrano
 
- * "Lighthouse App Bug Tracker":http://capistrano.lighthouseapp.com
+ * "Lighthouse Bug Tracker":http://capistrano.lighthouseapp.com
+
  * "Capistrano Tags on Stack Overflow":http://stackoverflow.com/questions/tagged/capistrano
-
-There is also a "core developers mailing list":http://groups.google.com/group/capistrano-devel which is publicly accessible available.
 
 Limited part time community support is also available in "#capistrano":irc://freenode.org/capistrano whenever the community and maintainers have the time to be present and active.
