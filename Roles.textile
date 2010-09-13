@@ -27,3 +27,7 @@ The modifiers can be set in the following way:
 role :db, 'db1.example.com', :primary => true, :no_release => false
 role :db, %w{db2.example.com db3.example.com}, :no_release => true
 </pre>
+
+In the above example <code>db1</code> will recieve the code during the checkout due to <code>:no_release => false</code> (which is the default, or a no-op at least if it's not true). Due to the <code>:primary => true</code> modifier the database migrations will be run here.
+
+On the other <code>db</code> servers, no migrations will take place, and no code will be released. This is perfect for isolating your databse slaves away from any code responsibility, or having to have a Ruby stack installed.
