@@ -1,0 +1,1 @@
+Welcome to the capistrano wiki!
