@@ -55,5 +55,5 @@ role :db, 'example.com', :primary => true
 However this is a nice use-case for the server() method, as you could simply write
 
 <pre>
-server 'example.com', [:app, :web, :db], :primary => true
+server "example.com", :web, :app
 </pre> 
