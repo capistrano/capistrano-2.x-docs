@@ -1,4 +1,4 @@
-The [[FAQ|Frequently Asked Questions]] is coming along, go there for some good answers!
+The [[Frequently Asked Questions]] is coming along, go there for some good answers!
 
 * [[Bugs and Questions]]
 * [[Getting Support]]
