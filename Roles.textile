@@ -9,6 +9,9 @@ h2. Populating Roles
 <pre>
 role :app, 'app1.example.com'
 role :app, ['app2.example.com' 'app3.example.com']
+role :web, 'web1.example.com'
 </pre>
+
+Notice that the role() method can take an array. You can read more in the API documentation "here":http://rdoc.info/rdoc/capistrano/capistrano/blob/515db3a0dec421d1c2200316ab58d7704176d577/Capistrano/Configuration/Roles.html#role-instance_method.
 
 h2. Modifiers
