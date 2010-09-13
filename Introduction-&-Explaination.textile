@@ -2,11 +2,13 @@ When beginning with Capistrano, it's often difficult for people to visualise how
 
 Capistrano is a system for *intermediate-to-advanced programmers* to execute commands in a structured, repeatable way on one or more remote machines.
 
-*It is incidentally pre-configured for deploying Rails applications.*
+*It is incidentally pre-configured for deploying Ruby Rails applications*; However people are successfully deploying PHP, Python and Erlang systems with it, not to mention static sites. Capistrano is also suitable for server administration. Software such as ["Paukul's Xool":http://github.com/paukul/zool] (designed for Unix user key management) are built around our framework.
 
 Successful use of Capistrano depends on a working knowledge of:
 
 * SSH (With configured ["SSK Keys":using-ssh-keys])
-* Ruby
+* Ruby 
 * Rake (in, that we follow their structure of [[task definitions]])
 * Source control software
+
+["Getting Started":getting-started]
