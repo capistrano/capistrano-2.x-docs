@@ -1,5 +1,3 @@
-h1. Frequently Asked Questions
-
 h2. Basics
 
 h3. What system prerequisites do I need to use Capistrano?
