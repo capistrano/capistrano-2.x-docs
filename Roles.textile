@@ -3,3 +3,11 @@ Capistrano's default recipe "deploy.rb":http://github.com/capistrano/capistrano/
 |^. <code>:web</code> | This is assumed to be your web servers (read: Apache / nginx / etc.) |
 |^. <code>:app</code> | These are assumed to be your application servers, in a Ruby environment this means something like Mongrel, or Mongrel Cluster; it can also be your Passenger servers. |
 |^. <code>:db</code> | This, naturally enough is your database server. You can use server/role modifiers below to control which is considered to be the primart one. |
+
+h2. Populating Roles
+
+role :app, 'app1.example.com'
+role :app, 'app2.example.com'
+role :app, 'app3.example.com'
+
+h2. Modifiers
