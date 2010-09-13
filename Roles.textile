@@ -1,4 +1,4 @@
-Capistrano's default recipe "deploy.rb":http://github.com/capistrano/capistrano/blob/master/lib/capistrano/recipes/deploy.rb expects a number of default roles to be defined so that it may opperate correctly.
+Capistrano's default recipe "deploy.rb":http://github.com/capistrano/capistrano/blob/master/lib/capistrano/recipes/deploy.rb expects a number of default roles to be defined so that it may operate correctly.
 
 |^. <code>:web</code> | This is assumed to be your web servers (read: Apache / nginx / etc.) |
 |^. <code>:app</code> | These are assumed to be your application servers, in a Ruby environment this means something like Mongrel, or Mongrel Cluster; it can also be your Passenger servers. |
