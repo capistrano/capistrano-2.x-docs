@@ -1,1 +1,3 @@
-How to get started
+There are a few things you should do before using Capistrano.
+
+* [[Decide how to deploy]]
