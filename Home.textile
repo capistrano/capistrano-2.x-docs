@@ -12,7 +12,7 @@ Simply put, Capistrano is a tool for automating tasks on one or more remote serv
 
 h2. Get It.
 
-If you already have Ruby and RubyGems installed, getting Capistrano is a cinch:
+If you already have Ruby and RubyGems installed, getting Capistrano is a cinch; we recommend "Ruby 1.8.7":http://www.ruby-lang.org/en/news/2008/05/31/ruby-1-8-7-has-been-released/:
 
 @gem install capistrano@
 
