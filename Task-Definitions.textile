@@ -17,6 +17,8 @@ task :remote_time, :roles => :app do
 end
 </pre>
 
-Note that even in this contrived example, there are some important things happening. Firstly we're setting a configuration variable, simply <code>:server_ruby</code>. This is a great way to ensure that environmental changes on the server to not break deploy scripts. Especially when deploying to production environments you should be certain of the commands which will take place.
+Note that even in this contrived example, there are some important things happening. Firstly we're setting a configuration variable, simply <code>:server_ruby</code>; this is a great way to ensure that environmental changes on the server to not break deploy scripts. Especially when deploying to production environments you should be certain of the commands which will take place.
 
 We're also using the "capture()":http://rdoc.info/rdoc/capistrano/capistrano/blob/515db3a0dec421d1c2200316ab58d7704176d577/Capistrano/Configuration/Actions/Inspect.html#capture-instance_method method, which returns the value of the expression captured within.
+
+Finally, you notice that this task is intended only to run on servers in the <code>:app</code> role.
