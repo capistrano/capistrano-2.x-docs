@@ -5,6 +5,7 @@ Capistrano's default recipe "deploy.rb":http://github.com/capistrano/capistrano/
 |^. <code>:db</code> | This, naturally enough is your database server. You can use server/role modifiers below to control which is considered to be the primart one. |
 
 h2. Populating Roles
+
 <pre>
 role :app, 'app1.example.com'
 role :app, 'app2.example.com'
