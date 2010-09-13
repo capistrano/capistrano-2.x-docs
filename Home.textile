@@ -24,4 +24,4 @@ You can find us on GitHub at:
 
 h2. Getting Started
 
- * "Introduction & Explaination"[[Introduction & Explaination]]
+ * [[Introduction & Explaination]]
