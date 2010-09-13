@@ -6,7 +6,7 @@ Capistrano is a system for *intermediate-to-advanced programmers* to execute com
 
 Successful use of Capistrano depends on a working knowledge of:
 
-* SSH 
+* SSH (With configured ["SSK Keys":using-ssh-keys])
 * Ruby
 * Rake (in, that we follow their structure of [[task definitions]])
 * Source control software
