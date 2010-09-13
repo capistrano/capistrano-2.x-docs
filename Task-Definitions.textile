@@ -8,6 +8,7 @@ end
 </pre>
 
 In order to perform a similar action on a remote machine, assuming you have [[everything properly configured]], the same task might look something like this:
+
 <pre>
 set :server_ruby, '/opt/local/bin/ruby' 
 desc "Print out the time on the remote servers"
