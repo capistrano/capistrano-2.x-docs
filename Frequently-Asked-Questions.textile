@@ -8,7 +8,7 @@ h3. How do I install Capistrano?
 
 Once you have Ruby 1.8.6 (MRI) with RubyGems installed, type the following command.
 
-    gem install capistrano
+<pre>gem install capistrano</pre>
 
 h3. Does Capistrano work on Ruby 1.9? JRuby? Rubinius?
 
