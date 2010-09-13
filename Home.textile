@@ -14,8 +14,7 @@ h2. Get It.
 
 If you already have Ruby and RubyGems installed, getting Capistrano is a cinch:
 
-pre.
-# gem install capistrano
+@gem install capistrano@
 
 h2. Source Repository
 
