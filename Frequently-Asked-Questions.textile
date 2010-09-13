@@ -2,7 +2,7 @@ h2. Basics
 
 h3. What system prerequisites do I need to use Capistrano?
 
-Capistrano requires Ruby 1.8.7 (MRI) with RubyGems installed. Some people have had limited success with JRuby. Some versions of Ruby 1.8.7 had a "thread selecting bug":http://redmine.ruby-lang.org/issues/show/1993, if you are affected you should upgrade immediately. A workaround is included in Net-SSH > 2.0.14.
+Capistrano requires Ruby 1.8.7 ("MRI":http://en.wikipedia.org/wiki/Ruby_MRI) with RubyGems installed. Some people have had limited success with JRuby. Some versions of Ruby 1.8.7 had a "thread selecting bug":http://redmine.ruby-lang.org/issues/show/1993, if you are affected you should upgrade immediately. A workaround is included in Net-SSH > 2.0.14.
 
 h3. How do I install Capistrano?
 
