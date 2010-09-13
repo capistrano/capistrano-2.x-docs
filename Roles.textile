@@ -34,7 +34,7 @@ On the other <code>db</code> servers, no migrations will take place, and no code
 
 h2. Defining your own roles.
 
-You can select any artibrary name which isn't already reserved for your role names. The default recipe will ignore them but when writing your own tasks you can define your own modifiers and role names
+You can select any arbitrary name which isn't already reserved for your role names. The default recipe will ignore them but when writing your own tasks you can define your own modifiers and role names
 
 h2. Alternative Synax
 
