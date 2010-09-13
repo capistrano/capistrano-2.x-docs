@@ -1,3 +1,28 @@
-This is a forked repository. Have a look at
-        "jamis's capistrano wiki":/jamis/capistrano/wikis
-        for more information.
+The [[FAQ|Frequently Asked Questions]] is coming along, go there for some good answers!
+
+* [[Bugs and Questions]]
+* [[Getting Support]]
+* [[Mailing Lists]]
+
+* [[Recipes]] to get stuff done.
+
+* [[Plugins]] to get even more stuff done.
+
+* [[Internals]] to understand the details, and perhaps contribute.
+** [[Action Module|Action]]
+** [[Config Module|Config]]
+
+* [[Handling Errors]] within your deploy scripts, 
+* [[Deployment Strategies]] (such as :export, :checkout and :remote_cache) (the deploy_via setting)
+
+* [[Default Deploy]] step through a standard deploy:setup, and a deploy.
+
+* [[Capistrano Default Methods|Disable Capistrano Default Methods]] - Disable Capistrano's rails-centric defaults and having a clean start.
+
+* [[Method Chaining with Before() and After()]] method chains allow more robust deploys.
+
+* [[How to use Capistrano with Rails 2.3]] - Proposed documentation updates
+
+* [[Organising Complex Deployment Strategies]]
+
+* [[How To Leverage the Power of Namespaces]]
