@@ -8,11 +8,11 @@ h3. How do I install Capistrano?
 
 Once you have Ruby 1.8.6 (MRI) with RubyGems installed, type the following command.
 
-  gem install capistrano
+    gem install capistrano
 
 h3. Does Capistrano work on Ruby 1.9? JRuby? Rubinius?
 
-Capistrano should be working fine on Ruby 1.9. Capistrano may work under JRuby, but hasn't been tested on Rubinius or the other non-MRI rubies. 
+Capistrano should be working fine on Ruby 1.9. Capistrano has been reported to work under JRuby, but hasn't been tested on Rubinius or the other non-MRI rubies. 
 
 (This does not mean your server can't run Rubinius, etc. Just means you must use one of the supported rubies to execute Capistrano tasks on your local machine - the machine you use to control your servers.)
 
@@ -22,31 +22,31 @@ Capifying is the process of configuring your application to use Capistrano for d
 
 h3. How do I "capify" a rails application?
 
-Make sure you're in the root of the application, and type: "capify ." This will create two files: ./Capfile and ./config/deploy.rb
+Make sure you're in the root of the application, and type: "capify ." This will create two files: ./capfile and ./config/deploy.rb
 
 h3. What is a Capfile?
 
-"Capfile" is to Capistrano as "Rakefile" is to Rake, and "Makefile" is to make. It is the file that cap (Capistrano's command-line client) will try to find and load by default.
+"Capfile" is to Capistrano as "Rakefile" is to Rake, and "Makefile" is to make. It is the file that cap (Capistrano's command-line client) will try to find and load by default. This is the file where your deployment environment is bootstrapped.
 
 h3. What is the purpose of the ./config/deploy.rb file in a Rails application?
 
 Rails conventions dictate that all configuration should go under the config/ directory. So the default Capfile will mostly just load the default deployment recipes, and then load "config/deploy.rb" You could get away with just using Capfile, and deleting config/deploy.rb.
 
-h2. Standard Variables
+h4. Standard Variables
 
-h3. What is the :application variable?
+h4. What is the :application variable?
 
 The :application variable isn't used for much, but is handy for identifying which app is being deployed.
 
-h3. What is the :user variable?
+h4. What is the :user variable?
 
 The :user variable is the SSH username you are logging into the servers as. In collaborative development, you might not want to embed your own username here, since other developers might be deploying, too.
 
-h3. What is the :password variable?
+h4. What is the :password variable?
 
 The :password variable is the SSH password you are logging into the servers with. It should be the password that matches the :user variable. It is generally not a good idea to hard-code this variable into the file, except while you are first getting familiar with Capistrano. It is much better idea to setup SSH public/private keys [TODO - add link] - in which case this variable does not need to be set at all.
 
-h3. What is the :scm variable?
+h4. What is the :scm variable?
 
 The :scm variable is for specifying the type of source control system you are using. It is set to :subversion by default. It is unnecessary to set it explicitly unless you are using something else. See the 'Source Control' section below for more info.
 
