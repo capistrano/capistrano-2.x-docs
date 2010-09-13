@@ -1,11 +1,13 @@
-==Basics==
+h1. Frequently Asked Questions
 
-Test Edit
+h2. Basics
 
-===What system prerequisites do I need to use Capistrano?===
+h3. What system prerequisites do I need to use Capistrano?
+
 Capistrano requires Ruby 1.8.6 (MRI) with RubyGems installed. How to do this depends on your operating system. Go here to get started: http://www.ruby-lang.org/en/downloads/
 
-===How do I install Capistrano?===
+h3. How do I install Capistrano?
+
 Once you have Ruby 1.8.6 (MRI) with RubyGems installed, type the following command.
 
   gem install capistrano
