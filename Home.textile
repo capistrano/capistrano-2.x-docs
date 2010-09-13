@@ -22,6 +22,7 @@ You can find us on GitHub at:
 
     * "http://www.github.com/capistrano/capistrano":http://www.github.com/capistrano/capistrano
 
-h2. Getting Started
+h2. Begin Automating!
 
- * ["Introduction & Explaination":introduction-explaination]
+ # ["Introduction & Explaination":introduction-explaination] 
+ # ["Getting Started":getting-started]
