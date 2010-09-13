@@ -1,0 +1,1 @@
+When beginning with Capistrano, it's often difficult for people to visualise how all the gears fit together.
