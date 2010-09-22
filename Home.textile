@@ -2,5 +2,5 @@ h1. Warning!
 
 *Note:* http://capify.org/ is down, since September 18th 2010. It is being restored here as quickly as possible, please be patient.
 
- # ["Introduction & Explaination":introduction-explaination] 
- # ["Getting Started":getting-started]
+ # [[Introduction & Explaination|Introduction-explaination]]
+ # [[Getting Started|getting-started]]
