@@ -2,31 +2,5 @@ h1. Warning!
 
 *Note:* http://capify.org/ is down, since September 18th 2010. It is being restored here as quickly as possible, please be patient.
 
-h2. The Pitch.
-
-You lead a busy life. You don’t have the time to waste logging in and logging out of your servers all day, running tasks, installing software, keeping machines in sync, and trying to make sure it all happens correctly.
-
-h2. Enter Capistrano.
-
-Let Capistrano do the heavy lifting for you. It is designed with repeatability in mind, letting you easily and reliably automate tasks that used to require login after login and a small army of custom shell scripts.
-
-h2. Exit Tedium.
-
-Simply put, Capistrano is a tool for automating tasks on one or more remote servers. It executes commands in parallel on all targeted machines, and provides a mechanism for rolling back changes across multiple machines. It is ideal for anyone doing any kind of system administration, either professionally or incidentally.
-
-h2. Get It.
-
-If you already have Ruby and RubyGems installed, getting Capistrano is a cinch; we recommend "Ruby 1.8.7":http://www.ruby-lang.org/en/news/2008/05/31/ruby-1-8-7-has-been-released/:
-
-@gem install capistrano@
-
-h2. Source Repository
-
-You can find us on GitHub at:
-
-    * "http://www.github.com/capistrano/capistrano":http://www.github.com/capistrano/capistrano
-
-h2. Begin Automating!
-
  # ["Introduction & Explaination":introduction-explaination] 
  # ["Getting Started":getting-started]
