@@ -6,4 +6,6 @@ If you are new to Capistrano 2.x please read [[Getting Started|2.x---Getting-Sta
 
 ## Reference Resources
 
+* [[Configuration Variables|2.x - Significant Configuration Variables]]
+
 ## Seeking Assistance
