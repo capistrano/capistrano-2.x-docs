@@ -6,6 +6,8 @@ If you are new to Capistrano 2.x please read [[Getting Started|2.x---Getting-Sta
 
 ## Reference Resources
 
-* [[Configuration Variables|2.x - Significant Configuration Variables]]
+* [[Configuration Variables|2.x---Significant-Configuration-Variables]]
+* [[API Documentation|http://rubydoc.info/github/capistrano/capistrano/master/frames]]
+* [[DSL Documentation|2.x---DSL-Documentation]] (covers all `capistrano` specific methods, `run()`, `task()`, `role()`, `download()`, etc)
 
 ## Seeking Assistance
