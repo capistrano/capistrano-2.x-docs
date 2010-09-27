@@ -1,0 +1,112 @@
+;Definition
+:<tt><nowiki>run(command, options={}, &block)</nowiki></tt>
+;Module
+:Capistrano::Configuration::Actions::Invocation
+;File
+:[http://github.com/jamis/capistrano/blob/master/lib/capistrano/configuration/actions/invocation.rb capistrano/configuration/actions/invocation.rb]
+
+The <tt>run</tt> action is used to execute commands on one or more servers. It can be used to execute arbitrary shell commands, including any POSIX shell script syntax. It may also be given a block in order to capture output from and interact with the remote command.
+
+The <tt>run</tt> command will execute the command on all matching servers ''simultaneously''. People frequently want to know which server a command is being executed on at a particular moment--the answer is, honestly, "all of them." (If you want to try and do different things on different servers in parallel, check out the <tt>[[parallel]]</tt> helper.)
+
+==Arguments==
+
+===<tt>command</tt>===
+
+This must be a string containing the shell command (or commands) to execute. It may be any valid POSIX shell command, including multiple commands combined using semicolons, pipes, or ampersands. No escaping of the input is performed.
+
+If the command is determined to include a <tt>[[sudo]]</tt> invocation, <tt>run</tt> will also (by default) look for sudo prompts and, if found, will prompt the user for a password and pass what is entered back to the command.
+
+Examples:
+
+ run "ln -s /usr/local/bin/ruby /usr/bin/ruby"
+ run "ls -l \"~/Project Folders\""
+ run "if [ -d /u/apps/social ]; then cd /u/apps/social && git pull; else cd /u/apps && git clone git://github.com/me/social.git; fi"
+ run "#{[[sudo]]} apachectl restart"
+
+Note that if you embed the special string <tt>$CAPISTRANO:HOST$</tt> anywhere inside of a command, it will be replaced with the host name of the server on which the command is being executed. In this way, you can tailor commands so that they work slightly differently for different hosts:
+
+ run "cp /u/apps/social/config/solr-$CAPISTRANO:HOST$.conf /u/apps/social/config/solr.conf"
+ run "/u/apps/social/script/init-$CAPISTRANO:HOST$.sh"
+
+For changing the command per-host more significantly, see the <tt>[[parallel]]</tt>.
+
+===<tt>options</tt>===
+
+The options hash can be used to modify the default behavior of <tt>run</tt>. Recognized options are:
+
+;<tt>:hosts</tt>
+:Either a string (for a single target host) or an array of strings, indicating which hosts the command should run on. By default, the hosts are determined from current task's roles. This can also a Proc object, in which case it will be invoked and the return value used as the host list. (This can be useful for deferred calculation of the hosts to use, especially when passed as an option to <tt>[[task]]</tt>.)
+;<tt>:roles</tt>
+:Either a string or symbol (for a single target role) or an array of strings or symbols, indicating which roles the command should run on. If <tt>:hosts</tt> is specified, <tt>:roles</tt> will be ignored. By default, the roles are taken from the current task. This can also be a Proc object, in which case it will be invoked and the return value used as the roles list. (This can be useful for deferred calculation of the roles to use, especially when passed as an option to <tt>[[task]]</tt>.)
+;<tt>:only</tt>
+:Specifies a condition limiting which hosts will be selected to run the command. This should refer to values set in the <tt>[[role]]</tt>.  For example, if a role is defined with <tt>:primary => true</tt>, then you could select only hosts with that setting by specifying <tt>:only => { :primary => true }</tt>.
+;<tt>:except</tt>
+:Specifies a condition limiting which hosts will be selected to run the command. This is the inverse of <tt>:only</tt> (hosts that do ''not'' match the condition will be selected).
+;<tt>:once</tt>
+:If true, only the first matching server will be selected. The default is false (all matching servers will be selected).
+;<tt>:max_hosts</tt>
+:Specifies the maximum number of hosts that should be selected at a time. If this value is less than the number of hosts that are selected to run, then the hosts will be run in groups of max_hosts. The default is nil, which indicates that there is no maximum host limit. <font color="red">Warning: this setting will probably be removed in a future release.</font>
+;<tt>:shell</tt>
+:Says which shell should be used to invoke commands. This defaults to "sh", but you could use this to select (e.g.) "/bin/bash" if a bare "sh" doesn't work on your system for some reason. Setting this to false causes Capistrano to invoke the command directly, without going through a separate shell.
+;<tt>:data</tt>
+:If not <tt>nil</tt> (the default), this should be a string that will be passed to the command's <tt>stdin</tt> stream. This can be used to "prime the pump", if some command needs some initial interaction before doing something useful.
+;<tt>:pty</tt>
+:If true, a pseudo-tty will be allocated for each command. The default is false. Note that there are benefits and drawbacks both ways.  Empirically, it appears that if a pty is allocated, most SSH server daemons will ''not'' read user shell start-up scripts (e.g. bashrc, etc.). However, if a pty is ''not'' allocated, some commands (like sudo, or git, or svn) will run in non-interactive mode and will not prompt for (e.g.) passwords. You have to choose your poison, apparently.
+;<tt>:env</tt>
+:A hash of environment variable mappings that should be made available to the command. The keys should be environment variable names, and the values should be their corresponding values. The default is empty, but may be modified by changing the <tt>[[default_environment]]</tt> Capistrano variable.
+
+Note that any of these keys can be set in the <tt>[[default_run_options]]</tt> hash. If they are, the values you specify will be used as the defaults for subsequent invocations of <tt>run</tt>, <tt>[[invoke_command]]</tt>, <tt>[[sudo]]</tt>, and <tt>[[parallel]]</tt>.
+
+===<tt>&block</tt>===
+
+If no block is passed to <tt>run</tt>, run will default to echoing all output from the command. If you specify a block, however, you can capture and process the output from the command as the command emits it, and you can also send data back on the command's <tt>stdin</tt> stream.
+
+The block takes three parameters:
+
+ run "command" do |channel, stream, data|
+   # ...
+ end
+
+The <tt>channel</tt> parameter is the SSH channel object that is hosting the command. This is used to send data back to the command, as well as to determine which server sent the data to you (since commands are run in parallel on all matching servers).
+
+ run "command" do |channel, stream, data|
+   puts "host-name: " + channel[:host]        # server host name, as a string
+   puts "server object: " + channel[:server]  # Capistrano::ServerDefinition object for the server
+   channel.send_data("password\n")            # send data back via the remote command's stdin stream
+ end
+
+The <tt>stream</tt> parameter is a symbol, either <tt>:out</tt> (for <tt>stdout</tt>) or <tt>:err</tt> (for <tt>stderr</tt>), indicating which output stream the data arrived on. You can use this to differentiate between streams, if you need to. For instance, if you know that any data from stderr means an error happened, you can act accordingly when <tt>stream</tt> is <tt>:err</tt>.
+
+Lastly, the <tt>data</tt> parameter is a string containing the data emitted by the command. It is important to note that all of a command's output may not be sent in a single chunk. In fact, the data may not even be entirely line-wise. Thus, a single command may result in multiple invocations of the block, with each data chunk being the next block of data from the command.
+
+This is further complicated by the fact that each ''server'' will use the same callback, so if you are invoking a command on three servers, each of those three command invocations will use the same block. If you need to interact with the remote commands, you can use <tt>channel[:host]</tt> and <tt>channel[:server]</tt> to determine which server sent the data.
+
+==Caveats==
+
+The <tt>run</tt> helper may not be appropriate for running commands which do not need to be executed remotely. Such commands, for example repository checks or shared location file copying, can be run from the server on which the deploy script itself is run. In such instances, it may be more appropriate to utilize the backtick (<tt>`</tt>) instead. An example would be a task to output a list of tagged releases.
+
+  `svn ls -v #{repository_root}/releases | awk '{print $1\",\"$2\",\"$3\",\"$4\",\"$5\",\"$6}'`
+
+and
+
+  run "svn ls -v #{repository_root}/releases | awk '{print $1\",\"$2\",\"$3\",\"$4\",\"$5\",\"$6}'"
+
+Both commands appear to be the same, but the second would be executed on each server (assuming more than one server exists for a given role). Although specifying <tt>:once => true</tt> or <tt>:hosts => `hostname`</tt> would resolve the issue, an unnecessary SSH connection is made (at least as far as I have determined).
+
+A good way to illustrate the differences between <tt>run</tt> and <tt>`</tt> is with the following basic task:
+
+  task :illustrate_run do
+    puts `hostname`
+    run "hostname" do |c,s,d|
+      puts d
+    end
+  end
+
+==See Also==
+
+* <tt>[[sudo]]</tt>
+* <tt>[[parallel]]</tt>
+* <tt>[[invoke_command]]</tt>
+* <tt>[[capture]]</tt>
+* <tt>[[stream]]</tt>
