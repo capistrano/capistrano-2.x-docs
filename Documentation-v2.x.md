@@ -7,7 +7,7 @@ If you are new to Capistrano 2.x please read [[Getting Started|2.x---Getting-Sta
 ## Reference Resources
 
 * [[API Documentation|http://rubydoc.info/github/capistrano/capistrano/master/frames]]
-* [[DSL Documentation|2.x---DSL-Documentation]]
+* DSL Documentation
   * [[Action Module|2.x---DSL-Documentation-Action-Module]] (`put()`, `get()`, `run()`, etc)
   * [[Configuration Module|2.x---DSL-Documentation-Configuration-Module]] (`namespace()`, `task()`, `set()`, `fetch()`, etc)
 * [[Configuration Variables|2.x---Significant-Configuration-Variables]]
