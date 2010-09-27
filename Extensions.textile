@@ -1,0 +1,7 @@
+h2. Capistrano Extensions
+
+|_. Extenstion|_. Description|_. Version 2|_. Version 3|
+|"Jamis Buck’s Capistrano-Ext Gem":http://www.capistranorb.com/index.php?title=Deploying_to_Multiple_Stages|Multi-stage Deployment|=.x||
+|"Alternative Deployment Recipes":http://www.capistranorb.com/index.php?title=Alternative_Deployment_Recipes||=.x||
+|"capistrano-offroad":http://rubygems.org/gems/capistrano-offroad|Deploy non-rails apps (mostly Django)|=.x||
+|"capistrano_winrm":http://github.com/zenchild/capistrano_winrm|Run commands against MS Windows servers with WinRM|=.x||
