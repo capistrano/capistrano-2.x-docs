@@ -1,1 +1,1 @@
-lorem ipsum
+If you are new to Capistrano 2.x please read [[Getting Started|2.x_Getting Started]]
