@@ -6,7 +6,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
  * [[Github Guide to Deploying with Capistrano|http://github.com/guides/deploying-with-capistrano]]
 
-## For your Framework & Tools
+## Frameworks & Tools
 
 * [[Using Capistrano 2.x with Rails 2.x+]]
 * [[Using Capistrano 2.x with Rails 3.x+]]
