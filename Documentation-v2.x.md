@@ -16,10 +16,10 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[Configuration Module|2.x---DSL-Documentation-Configuration-Module]] (`namespace()`, `task()`, `set()`, `fetch()`, etc)
 * [[Configuration Variables|2.x---Significant-Configuration-Variables]]
 
-## 3rd Party Articles
+## Useful Background Knowledge (3rd Party Articles)
 
 • Unix Shell
-  * [[http://codex.wordpress.org/UNIX_Shell_Skills||Unix shell skills]] (Wordpress guide, but very readable for beginners)
+  * [[Unix shell skills|http://codex.wordpress.org/UNIX_Shell_Skills]] (Wordpress guide, but very readable for beginners)
 
 * Bash 
   * [[Shell scripting for beginners|http://wiki.bash-hackers.org/scripting/basics]]
@@ -30,6 +30,21 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[What is an SSH Agent|http://en.wikipedia.org/wiki/Ssh-agent]]
   * [[How SSH Agent Forwarding Works|http://unixwiz.net/techtips/ssh-agent-forwarding.html]]
   * [[What are deploy keys?|http://help.github.com/deploy-keys/]]
+
+## 3rd Party Tutorials
+
+* Testing
+  * [[Testing Capistrano with Cucumber|http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber]]
+* Other Software Packages
+  * [[Drupal|http://tempe.st/2008/07/deploying-drupal-with-capistrano/]] 
+  * Wordpress
+    * [[http://github.com/jestro/wordpress-capistrano/tree/master]]
+    * [[http://whomwah.com/2006/05/21/deploying-wordpress-using-capistrano/]]
+    * [[http://devblog.imedo.de/2008/6/23/wordpress-deployment-with-capistrano-2-and-git]]
+* Other Languages / Frameworks
+  * PHP
+    * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
+    * [[http://hivelogic.com/articles/view/deploying-expressionengine-github-capistrano]]
 
 ## Seeking Assistance
 
