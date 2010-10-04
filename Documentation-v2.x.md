@@ -11,8 +11,8 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 * [[Using Capistrano 2.x with Rails 2.x]]
 * [[Using Capistrano 2.x with Rails 3.x]]
 
-* [[http://github.com/carlhuda/bundler/blob/master/lib/bundler/capistrano.rb|Using Capistrano 2.x with Bundler]]
-* [[http://rvm.beginrescueend.com/integration/capistrano/|Using Capistrano 2.x with RVM]]
+* [[Using Capistrano 2.x with Bundler|http://github.com/carlhuda/bundler/blob/master/lib/bundler/capistrano.rb]]
+* [[Using Capistrano 2.x with RVM|http://rvm.beginrescueend.com/integration/capistrano/]]
 
 ## Intermediate Resources
 
@@ -45,7 +45,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Semi-Official Extensions
 
-  * [[Capistrano Multistage, Deploying to Multiple Environments]]
+  * [[Capistrano Multistage, Deploying to Multiple Environments|2.x Multistage Extension]]
   * [[Rails-less Deploy|http://github.com/leehambley/railsless-deploy/]]
 
 ## 3rd Party Extensions
