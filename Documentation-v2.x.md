@@ -16,7 +16,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Intermediate Resources
 
-* [[Default Deployment Behaviour]]
+* [[Default Deployment Behaviour|2.x-Default-Deployment-Behaviour]]
 * [[Managing `database.yml` Securely|http://www.simonecarletti.com/blog/2009/06/capistrano-and-database-yml/]]
 * [[Packaging Recipes|http://matthewtodd.org/2008/04/24/rails-tip-4-writing-capistrano-recipes-to-be-loaded-from-gems.html/]]
 
