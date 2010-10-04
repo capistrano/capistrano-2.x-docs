@@ -1,6 +1,6 @@
 ## General Resources & Beginner Guides
 
-If you are new to Capistrano 2.x please read [[Getting Started|2.x-Getting-Started]], once you are familiar with the basics you may want to read [[From the beginning|2.x-From-The-Beginning]] which is a much more detailed tutorial.
+If you are new to Capistrano 2.x please read [[Getting Started|2.x Getting Started]], once you are familiar with the basics you may want to read [[From the beginning|2.x-From-The-Beginning]] which is a much more detailed tutorial.
 
 You may also want to read, and or contribute to the [[Capistrano handbook|http://github.com/leehambley/capistrano-handbook/blob/master/index.markdown]] - an immature document that holds some really useful tips, but needs a lot more work!
 
