@@ -6,7 +6,7 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
 
 ## Intermediate Resources
 
-
+* [[Default Deployment Behaviour]]
 
 ## Reference Resources
 
@@ -16,5 +16,8 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
   * [[Configuration Module|2.x---DSL-Documentation-Configuration-Module]] (`namespace()`, `task()`, `set()`, `fetch()`, etc)
 * [[Configuration Variables|2.x---Significant-Configuration-Variables]]
 
+## 3rd Party Articles
+
+* SSH
 
 ## Seeking Assistance
