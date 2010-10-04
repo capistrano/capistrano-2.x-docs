@@ -26,3 +26,9 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
   * [[How SSH Agent Forwarding Works]]
 
 ## Seeking Assistance
+
+Help first and foremost via the [[Capistrano Google Group|http://groups.google.com/group/capistrano]]. Community support is also also often available in [[#capistrano on freenode||irc://irc.freenode.org/capistrano]].
+
+There are extensive archives of questions and answers also at [[stackoverflow.com, tagged #capistrano|http://stackoverflow.com/questions/tagged/capistrano]].
+
+For bugs and problems please open an issue in the [[lighthouse project tracker|http://capistrano.lighthouseapp.com/]] - preferably with a patch, test-case, or steps-to-reproduce. Pull requests on Github will be ignored without a corresponding ticket, as there is no history of changes or forum for discussion without submitting a ticket.
