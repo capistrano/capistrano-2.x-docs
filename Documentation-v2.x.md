@@ -43,6 +43,16 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[How SSH Agent Forwarding Works|http://unixwiz.net/techtips/ssh-agent-forwarding.html]]
   * [[What are deploy keys?|http://help.github.com/deploy-keys/]]
 
+## Semi-Official Extensions
+
+  * [[Capistrano Multistage, Deploying to Multiple Environments]]
+  * [[Rails-less Deploy|http://github.com/leehambley/railsless-deploy/]]
+
+## 3rd Party Extensions
+
+  * [[capistrano-offroad|http://rubygems.org/gems/capistrano-offroad]] (For deploying non-rails apps, specially Django)
+  * [[capistrano_winrm|http://github.com/zenchild/capistrano_winrm]] Run commands against MS Windows servers with WinRM
+
 ## 3rd Party Tutorials
 
 * Testing
