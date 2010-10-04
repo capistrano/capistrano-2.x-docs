@@ -18,6 +18,12 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
 
 ## 3rd Party Articles
 
+• Unix Shell
+  * [[http://codex.wordpress.org/UNIX_Shell_Skills||Unix shell skills]] (Wordpress guide, but very readable for beginners)
+
+* Bash 
+  * [[Shell scripting for beginners|http://wiki.bash-hackers.org/scripting/basics]]
+
 * SSH
   * [[Getting Started with SSH]]
   * [[SSH Options]] (Deprecated...)
