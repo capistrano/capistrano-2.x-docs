@@ -12,7 +12,7 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
 
 * [[API Documentation|http://rubydoc.info/github/capistrano/capistrano/master/frames]]
 * DSL Documentation
-  * [[Action Module|2.x---DSL-Documentation-Action-Module]] (`put()`, `get()`, `run()`, etc)
+  * [[Action Module|2.x---DSL-Documentation-Action-Module]] (`put()`, `get()`, `run()`, `stream()`, `capture()`, etc)
   * [[Configuration Module|2.x---DSL-Documentation-Configuration-Module]] (`namespace()`, `task()`, `set()`, `fetch()`, etc)
 * [[Configuration Variables|2.x---Significant-Configuration-Variables]]
 
