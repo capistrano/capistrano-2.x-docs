@@ -45,6 +45,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * PHP
     * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
     * [[http://hivelogic.com/articles/view/deploying-expressionengine-github-capistrano]]
+  * [[Any Non-Rails Project|http://github.com/leehambley/railsless-deploy/]]
 
 ## Seeking Assistance
 
