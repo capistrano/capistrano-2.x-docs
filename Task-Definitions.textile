@@ -1,4 +1,4 @@
-The simplest capistrano task would look like this, note there is nothing happening remotely here:
+The simplest Capistrano task would look like this, note there is nothing happening remotely here:
 
 <pre>
 desc "Print out the local time on the system"

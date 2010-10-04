@@ -1,9 +1,0 @@
-There are a number of things to take into account when you decide how to deploy.
-
-h2. To <code>root</code> or not?
-
-The <code>root</code> user on *nix based systems, basically has a license to kill… make a mistake and you could easily destroy your server. For this purpose we recommend configuring a user to deploy as. This user can have the ["SSH key":using-ssh-keys] for your development staff, and be configured to do everything required without super-user privileges.
-
-Whilst this is the recommendation, it is not the default as we recognise that people often can't configure their machines for this "blue-sky":http://en.wiktionary.org/wiki/blue-sky_thinking ideal.
-
-That said, more documentation will follow on the correct practices in this domain. The "web application deployment blog":http://wappd.wordpress.com/ often carries useful tips in this domain.

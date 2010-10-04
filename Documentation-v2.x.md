@@ -8,11 +8,11 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Frameworks & Tools
 
-* [[Using Capistrano 2.x with Rails 2.x+]]
-* [[Using Capistrano 2.x with Rails 3.x+]]
+* [[Using Capistrano 2.x with Rails 2.x]]
+* [[Using Capistrano 2.x with Rails 3.x]]
 
-* [[Using Capistrano 2.x with Bundler]]
-* [[Using Capistrano 2.x with RVM]]
+* [[http://github.com/carlhuda/bundler/blob/master/lib/bundler/capistrano.rb|Using Capistrano 2.x with Bundler]]
+* [[http://rvm.beginrescueend.com/integration/capistrano/|Using Capistrano 2.x with RVM]]
 
 ## Intermediate Resources
 
@@ -61,7 +61,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Seeking Assistance
 
-Help first and foremost via the [[Capistrano Google Group|http://groups.google.com/group/capistrano]]. Community support is also also often available in [[#capistrano on freenode||irc://irc.freenode.org/capistrano]].
+Help first and foremost via the [[Capistrano Google Group|http://groups.google.com/group/capistrano]]. Community support is also also often available in [[#Capistrano on freenode||irc://irc.freenode.org/capistrano]].
 
 There are extensive archives of questions and answers also at [[stackoverflow.com, tagged #capistrano|http://stackoverflow.com/questions/tagged/capistrano]].
 

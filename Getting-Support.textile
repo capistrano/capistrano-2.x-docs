@@ -6,4 +6,4 @@ Capistrano Support is available at the resources below:
 
  * "Capistrano Tags on Stack Overflow":http://stackoverflow.com/questions/tagged/capistrano
 
-Limited part time community support is also available in "#capistrano":irc://freenode.org/capistrano whenever the community and maintainers have the time to be present and active.
+Limited part time community support is also available in "#capistrano":irc://freenode.org/Capistrano whenever the community and maintainers have the time to be present and active.
