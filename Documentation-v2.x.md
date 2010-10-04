@@ -4,6 +4,8 @@ If you are new to Capistrano 2.x please read [[Getting Started|2.x---Getting-Sta
 
 You may also want to read, and or contribute to the [[Capistrano handbook|http://github.com/leehambley/capistrano-handbook/blob/master/index.markdown]] - an immature document that holds some really useful tips, but needs a lot more work!
 
+ * [[Github Guide to Deploying with Capistrano|http://github.com/guides/deploying-with-capistrano]]
+
 ## Intermediate Resources
 
 * [[Default Deployment Behaviour]]
