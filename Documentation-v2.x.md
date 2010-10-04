@@ -25,11 +25,11 @@ You may also want to read, and or contribute to the [[http://github.com/leehambl
   * [[Shell scripting for beginners|http://wiki.bash-hackers.org/scripting/basics]]
 
 * SSH
-  * [[Getting Started with SSH]]
-  * [[SSH Options]] (Deprecated...)
-  * [[How to use SSH Keys]]
-  * [[What is an SSH Agent]]
-  * [[How SSH Agent Forwarding Works]]
+  * [[Getting Started with SSH|http://kimmo.suominen.com/docs/ssh/]]
+  * [[How to use SSH Keys|http://www.sshkeychain.org/mirrors/SSH-with-Keys-HOWTO/]]
+  * [[What is an SSH Agent|http://en.wikipedia.org/wiki/Ssh-agent]]
+  * [[How SSH Agent Forwarding Works|http://unixwiz.net/techtips/ssh-agent-forwarding.html]]
+  * [[What are deploy keys?|http://help.github.com/deploy-keys/]]
 
 ## Seeking Assistance
 
