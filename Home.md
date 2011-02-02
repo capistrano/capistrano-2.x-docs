@@ -30,7 +30,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Useful Background Knowledge (3rd Party Articles)
 
-• Unix Shell
+* Unix Shell
   * [[Unix shell skills|http://codex.wordpress.org/UNIX_Shell_Skills]] (Wordpress guide, but very readable for beginners)
 
 * Bash 
