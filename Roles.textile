@@ -28,7 +28,7 @@ role :db, 'db1.example.com', :primary => true, :no_release => false
 role :db, %w{db2.example.com db3.example.com}, :no_release => true
 </pre>
 
-In the above example <code>db1</code> will recieve the code during the checkout due to <code>:no_release => false</code> (which is the default, or a no-op at least if it's not true). Due to the <code>:primary => true</code> modifier the database migrations will be run here.
+In the above example <code>db1</code> will receive the code during the checkout due to <code>:no_release => false</code> (which is the default, or a no-op at least if it's not true). Due to the <code>:primary => true</code> modifier the database migrations will be run here.
 
 On the other <code>db</code> servers, no migrations will take place, and no code will be released. This is perfect for isolating your databse slaves away from any code responsibility, or having to have a Ruby stack installed.
 
@@ -36,11 +36,11 @@ h2. Defining your own roles.
 
 You can select any arbitrary name which isn't already reserved for your role names. The default recipe will ignore them but when writing your own tasks you can define your own modifiers and role names
 
-h2. Alternative Synax
+h2. Alternative Syntax
 
 role() can also take a block, it is expected to return the options hash that would otherwise be expected.
 
-In addition to role() there is also "server()":http://rdoc.info/rdoc/capistrano/capistrano/blob/515db3a0dec421d1c2200316ab58d7704176d577/Capistrano/Configuration/Roles.html#server-instance_method which is for defining an individual server, and specifying a role; there are circumstances when this is prefereable.
+In addition to role() there is also "server()":http://rdoc.info/rdoc/capistrano/capistrano/blob/515db3a0dec421d1c2200316ab58d7704176d577/Capistrano/Configuration/Roles.html#server-instance_method which is for defining an individual server, and specifying a role; there are circumstances when this is preferable.
 
 h2. Servers playing multiple roles.
 
