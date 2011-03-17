@@ -1,0 +1,1 @@
+Please see the [[Home]] page for Capistrano documentation.
