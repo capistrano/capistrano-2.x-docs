@@ -3,6 +3,6 @@
   <title>Titulo</title>
 </head>
 <body>
-  <%= yield %>
+  <%=yield%>
 </body>
 </html>
