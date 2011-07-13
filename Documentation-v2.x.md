@@ -2,4 +2,4 @@
 
 Capistrano is a developer tool for deploying web applications. It is typically installed on a workstation, and used to deploy code from your source code management (SCM) to one, or more servers.
 
-[Read more here](https://github.com/capistrano/capistrano/wiki/)
+## [Read more here](https://github.com/capistrano/capistrano/wiki/)
