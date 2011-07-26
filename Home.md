@@ -49,6 +49,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## 3rd Party Extensions
 
+  * [[capistrano-windows-server|http://github.com/SciMed/capistrano-windows-server]] Deploy Rails apps to Windows servers
   * [[capistrano-offroad|http://rubygems.org/gems/capistrano-offroad]] (For deploying non-rails apps, specially Django)
   * [[capistrano_winrm|http://github.com/zenchild/capistrano_winrm]] Run commands against MS Windows servers with WinRM
 
