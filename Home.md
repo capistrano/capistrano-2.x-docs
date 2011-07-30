@@ -37,7 +37,6 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 * SSH
   * [[Getting Started with SSH|http://kimmo.suominen.com/docs/ssh/]]
-  * [[How to use SSH Keys|http://www.sshkeychain.org/mirrors/SSH-with-Keys-HOWTO/]]
   * [[What is an SSH Agent|http://en.wikipedia.org/wiki/Ssh-agent]]
   * [[How SSH Agent Forwarding Works|http://unixwiz.net/techtips/ssh-agent-forwarding.html]]
   * [[What are deploy keys?|http://help.github.com/deploy-keys/]]
