@@ -65,6 +65,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
     * [[http://whomwah.com/2006/05/21/deploying-wordpress-using-capistrano/]]
     * [[http://devblog.imedo.de/2008/6/23/wordpress-deployment-with-capistrano-2-and-git]]
     * [[http://www.tractionco.com/blog/95-deploying-wordpress-with-capistrano-and-svn]]
+    * [[http://theme.fm/2011/08/tutorial-deploying-wordpress-with-capistrano-2082/]]
 * Other Languages / Frameworks
   * PHP
     * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
