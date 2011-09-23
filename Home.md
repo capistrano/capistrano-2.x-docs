@@ -74,7 +74,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 
 ## Seeking Assistance
 
-Help first and foremost via the [[Capistrano Google Group|http://groups.google.com/group/capistrano]]. Community support is also also often available in [[#Capistrano on freenode||irc://irc.freenode.org/capistrano]].
+Help first and foremost via the [[Capistrano Google Group|http://groups.google.com/group/capistrano]]. Community support is also also often available in [[#Capistrano on freenode|http://webchat.freenode.net/?channels=Capistrano]].
 
 There are extensive archives of questions and answers also at [[stackoverflow.com, tagged #capistrano|http://stackoverflow.com/questions/tagged/capistrano]].
 
