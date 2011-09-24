@@ -53,6 +53,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[capistrano_winrm|http://github.com/zenchild/capistrano_winrm]] Run commands against MS Windows servers with WinRM
   * [[capify-ec2|https://github.com/forward/capify-ec2]] A number of utilities to help with deploying to amazon ec2 instances
   * [[resque_utils|https://github.com/forward/resque_utils]] Helper tasks for remote Resque deployments (requeue & remove failed jobs)
+  * [[capistrano-ash|https://github.com/augustash/capistrano-ash]] For deploying Magento, Drupal, WordPress, and Zend/Doctrine apps
 
 ## 3rd Party Tutorials
 
