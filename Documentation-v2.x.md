@@ -6,4 +6,3 @@ Capistrano is a developer tool for deploying web applications. It is typically i
 
 This page is linked from [capistranorb.com], and must be left here for
 users accessing the wiki page via this URL.
-a
