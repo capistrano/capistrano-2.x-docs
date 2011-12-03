@@ -55,6 +55,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[resque_utils|https://github.com/forward/resque_utils]] Helper tasks for remote Resque deployments (requeue & remove failed jobs)
   * [[capistrano-ash|https://github.com/augustash/capistrano-ash]] For deploying Magento, Drupal, WordPress, and Zend/Doctrine apps
   * [[play-capistrano|http://www.playframework.org/modules/capistrano]] For deploying/controlling remote Play Framework apps
+  * [[capifony|http://capifony.org/]] For deploying symfony and Symfony2 apps
 
 ## 3rd Party Tutorials
 
@@ -72,6 +73,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * PHP
     * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
     * [[http://hivelogic.com/articles/view/deploying-expressionengine-github-capistrano]]
+    * [[http://blog.servergrove.com/2011/09/07/deploying-symfony2-projects-on-shared-hosting-with-capifony]]
   * [[Any Non-Rails Project|http://github.com/leehambley/railsless-deploy/]]
 
 ## Seeking Assistance
