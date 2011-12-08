@@ -8,7 +8,7 @@ h2. Populating Roles
 
 <pre>
 role :app, 'app1.example.com'
-role :app, ['app2.example.com' 'app3.example.com']
+role :app, ['app2.example.com', 'app3.example.com']
 role :web, 'web1.example.com'
 </pre>
 
