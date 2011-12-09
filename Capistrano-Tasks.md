@@ -21,7 +21,30 @@ USAGE:
 
 LIFECYCLE:
 
-## 
+## deploy:check
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:check
+------------------------------------------------------------
+Test deployment dependencies. Checks things like directory permissions,
+necessary utilities, and so forth, reporting on the things that appear to be
+incorrect or missing. This is good for making sure a deploy has a chance of
+working before you actually run `cap deploy'.
+
+You can define your own dependencies, as well, using the `depend' method:
+
+  depend :remote, :gem, "tzinfo", ">=0.3.3"
+  depend :local, :command, "svn"
+  depend :remote, :directory, "/u/depot/files"
+```
+
+USAGE:
+
+LIFECYCLE:
+
+ 
 # Database Tasks
 
 ## db:backup
