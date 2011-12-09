@@ -44,6 +44,447 @@ USAGE:
 
 LIFECYCLE:
 
+## deploy:cleanup
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:cleanup
+------------------------------------------------------------
+Clean up old releases. By default, the last 5 releases are kept on each server
+(though you can change this with the keep_releases variable). All other deployed
+revisions are removed from the servers. By default, this will use sudo to clean
+up the old releases, but if sudo is not available for your environment, set the
+:use_sudo variable to false instead.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:cold
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:cold
+------------------------------------------------------------
+Deploys and starts a `cold' application. This is useful if you have not deployed
+your application before, or if your application is (for some other reason) not
+currently running. It will deploy the code, run any pending migrations, and then
+instead of invoking `deploy:restart', it will invoke `deploy:start' to fire up
+the application servers.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:finalize_update
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:finalize_update
+------------------------------------------------------------
+[internal] Touches up the released code. This is called by update_code after the
+basic deploy finishes. It assumes a Rails project was deployed, so if you are
+deploying something else, you may want to override this task with your own
+environment's requirements.
+
+This task will make the release group-writable (if the :group_writable variable
+is set to true, which is the default). It will then set up symlinks to the
+shared directory for the log, system, and tmp/pids directories, and will lastly
+touch all assets in public/images, public/stylesheets, and public/javascripts so
+that the times are consistent (so that asset timestamping works).  This touch
+process is only carried out if the :normalize_asset_timestamps variable is set
+to true, which is the default The asset directories can be overridden using the
+:public_children variable.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:graceful_stop
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:graceful_stop
+------------------------------------------------------------
+There is no description for this task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:migrate
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:migrate
+------------------------------------------------------------
+Run the migrate rake task. By default, it runs this in most recently deployed
+version of the app. However, you can specify a different release via the
+migrate_target variable, which must be one of :latest (for the default
+behavior), or :current (for the release indicated by the `current' symlink).
+Strings will work for those values instead of symbols, too. You can also specify
+additional environment variables to pass to rake via the migrate_env variable.
+Finally, you can specify the full path to the rake executable by setting the
+rake variable. The defaults are:
+
+  set :rake,           "rake"
+  set :rails_env,      "production"
+  set :migrate_env,    ""
+  set :migrate_target, :latest
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:migrations
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:migrations
+------------------------------------------------------------
+Deploy and run pending migrations. This will work similarly to the `deploy'
+task, but will also run any pending migrations (via the `deploy:migrate' task)
+prior to updating the symlink. Note that the update in this case it is not
+atomic, and transactions are not used, because migrations are not guaranteed to
+be reversible.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:pending
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:pending
+------------------------------------------------------------
+Displays the commits since your last deploy. This is good for a summary of the
+changes that have occurred since the last deploy. Note that this might not be
+supported on all SCM's.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:pending:diff
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:pending:diff
+------------------------------------------------------------
+Displays the `diff' since your last deploy. This is useful if you want to
+examine what changes are about to be deployed. Note that this might not be
+supported on all SCM's.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:precompile_assets
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:precompile_assets
+------------------------------------------------------------
+Compile all assets
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:reload
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:reload
+------------------------------------------------------------
+There is no description for this task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:restart
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:restart
+------------------------------------------------------------
+There is no description for this task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:rollback
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:rollback
+------------------------------------------------------------
+Rolls back to a previous version and restarts. This is handy if you ever
+discover that you've deployed a lemon; `cap rollback' and you're right back
+where you were, on the previously deployed version.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:rollback:cleanup
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:rollback:cleanup
+------------------------------------------------------------
+[internal] Removes the most recently deployed release.
+This is called by the rollback sequence, and should rarely
+(if ever) need to be called directly.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:rollback:code
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:rollback:code
+------------------------------------------------------------
+Rolls back to the previously deployed version. The `current' symlink will be
+updated to point at the previously deployed version, and then the current
+release will be removed from the servers. You'll generally want to call
+`rollback' instead, as it performs a `restart' as well.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:rollback:revision
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:rollback:revision
+------------------------------------------------------------
+[internal] Points the current symlink at the previous revision.
+This is called by the rollback sequence, and should rarely (if
+ever) need to be called directly.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:setup
+
+OVERVIEW:
+
+```
+------------------------------------------------------------
+cap deploy:setup
+------------------------------------------------------------
+Prepares one or more servers for deployment. Before you can use any of the
+Capistrano deployment tasks with your project, you will need to make sure all of
+your servers have been prepared with `cap deploy:setup'. When you add a new
+server to your cluster, you can easily run the setup task on just that server by
+specifying the HOSTS environment variable:
+
+  $ cap HOSTS=new.server.com deploy:setup
+
+It is safe to run this task on servers that have already been set up; it will
+not destroy any deployed revisions or data.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:start
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:start
+------------------------------------------------------------
+There is no description for this task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:stop
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:stop
+------------------------------------------------------------
+There is no description for this task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:symlink
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:symlink
+------------------------------------------------------------
+Updates the symlink to the most recently deployed version. Capistrano works by
+putting each new release of your application in its own directory. When you
+deploy a new version, this task's job is to update the `current' symlink to
+point at the new version. You will rarely need to call this task directly;
+instead, use the `deploy' task (which performs a complete deploy, including
+`restart') or the 'update' task (which does everything except `restart').
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:update
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:update
+------------------------------------------------------------
+Copies your project and updates the symlink. It does this in a transaction, so
+that if either `update_code' or `symlink' fail, all changes made to the remote
+servers will be rolled back, leaving your system in the same state it was in
+before `update' was invoked. Usually, you will want to call `deploy' instead of
+`update', but `update' can be handy if you want to deploy, but not immediately
+restart your application.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:update_code
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:update_code
+------------------------------------------------------------
+Copies your project to the remote servers. This is the first stage of any
+deployment; moving your updated code and assets to the deployment servers. You
+will rarely call this task directly, however; instead, you should call the
+`deploy' task (to do a complete deploy) or the `update' task (if you want to
+perform the `restart' task separately).
+
+You will need to make sure you set the :scm variable to the source control
+software you are using (it defaults to :subversion), and the :deploy_via
+variable to the strategy you want to use to deploy (it defaults to :checkout).
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:upload
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:upload
+------------------------------------------------------------
+Copy files to the currently deployed version. This is useful for updating files
+piecemeal, such as when you need to quickly deploy only a single file. Some
+files, such as updated templates, images, or stylesheets, might not require a
+full deploy, and especially in emergency situations it can be handy to just push
+the updates to production, quickly.
+
+To use this task, specify the files and directories you want to copy as a
+comma-delimited list in the FILES environment variable. All directories will be
+processed recursively, with all files being pushed to the deployment servers.
+
+  $ cap deploy:upload FILES=templates,controller.rb
+
+Dir globs are also supported:
+
+  $ cap deploy:upload FILES='config/apache/*.conf'
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:web:disable
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:web:disable
+------------------------------------------------------------
+Present a maintenance page to visitors. Disables your application's web
+interface by writing a "maintenance.html" file to each web server. The servers
+must be configured to detect the presence of this file, and if it is present,
+always display it instead of performing the request.
+
+By default, the maintenance page will just say the site is down for
+"maintenance", and will be back "shortly", but you can customize the page by
+specifying the REASON and UNTIL environment variables:
+
+  $ cap deploy:web:disable \
+        REASON="hardware upgrade" \
+        UNTIL="12pm Central Time"
+
+Further customization will require that you write your own task.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## deploy:web:enable
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy:web:enable
+------------------------------------------------------------
+Makes the application web-accessible again. Removes the "maintenance.html" page
+generated by deploy:web:disable, which (if your web servers are configured
+correctly) will make your application web-accessible again.
+```
+
+USAGE:
+
+LIFECYCLE:
  
 # Database Tasks
 
