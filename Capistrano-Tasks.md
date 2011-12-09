@@ -2,6 +2,8 @@
 
 To get a list of the Capistrano tasks in a project, use `cap -T`. If you would like to see all the tasks (e.g. ones without descriptions or internal tasks), you can use `cap -vT`. To see more detail on an individual task, you can use `cap -e taskname`.
 
+The following tasks should be valid as of Capistrano v2.8.0.
+
 # Deploy Tasks
 
 ## deploy
