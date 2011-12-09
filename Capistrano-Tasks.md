@@ -582,6 +582,7 @@ Sync the local development database from the target rails_env.
 USAGE:
 
 LIFECYCLE:
+
 # Logging Tasks
 
 ## logging:tail_log
@@ -602,3 +603,51 @@ USAGE:
 LIFECYCLE: 
 
 This task does not run before or after other tasks.
+
+# Utility Tasks
+
+## invoke
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap invoke
+------------------------------------------------------------
+Invoke a single command on the remote servers. This is useful for performing
+one-off commands that may not require a full task to be written for them. Simply
+specify the command to execute via the COMMAND environment variable. To execute
+the command only on certain roles, specify the ROLES environment variable as a
+comma-delimited list of role names. Alternatively, you can specify the HOSTS
+environment variable as a comma-delimited list of hostnames to execute the task
+on those hosts, explicitly. Lastly, if you want to execute the command via sudo,
+specify a non-empty value for the SUDO environment variable.
+
+Sample usage:
+
+  $ cap COMMAND=uptime HOSTS=foo.capistano.test invoke
+  $ cap ROLES=app,web SUDO=1 COMMAND="tail -f /var/log/messages" invoke
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## shell
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap shell
+------------------------------------------------------------
+Begin an interactive Capistrano session. This gives you an interactive terminal
+from which to execute tasks and commands on all of your servers. (This is still
+an experimental feature, and is subject to change without notice!)
+
+Sample usage:
+
+  $ cap shell
+```
+
+USAGE:
+
+LIFECYCLE:
