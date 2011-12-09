@@ -4,13 +4,31 @@ To get a list of the Capistrano tasks in a project, use `cap -T`. If you would l
 
 # Deploy Tasks
 
+## deploy
+
+OVERVIEW:
+```
+------------------------------------------------------------
+cap deploy
+------------------------------------------------------------
+Deploys your project. This calls both `update' and `restart'. Note that this
+will generally only work for applications that have already been deployed once.
+For a "cold" deploy, you'll want to take a look at the `deploy:cold' task, which
+handles the cold start specifically.
+```
+
+USAGE:
+
+LIFECYCLE:
+
+## 
 # Database Tasks
 
 ## db:backup
 
 OVERVIEW:
 
-```unix
+```
 ------------------------------------------------------------
 cap db:backup
 ------------------------------------------------------------
@@ -27,7 +45,7 @@ This task does not run before or after other tasks.
 
 OVERVIEW:
 
-```unix
+```
 ------------------------------------------------------------
 cap db:export
 ------------------------------------------------------------
@@ -106,7 +124,7 @@ LIFECYCLE:
 
 OVERVIEW:
 
-```unix
+```
 ------------------------------------------------------------
 cap logging:tail_log
 ------------------------------------------------------------
