@@ -357,13 +357,16 @@ USAGE:
 
 LIFECYCLE:
 
-## deploy:symlink
+## deploy:create_symlink
 
 OVERVIEW:
 ```
 ------------------------------------------------------------
-cap deploy:symlink
+cap deploy:create_symlink
 ------------------------------------------------------------
+Note: This used to be deploy:symlink. It was renamed in version 2.10.0 to 
+deploy:create_symlink because of bad namespacing between rake 0.9.x and 
+capistrano.
 Updates the symlink to the most recently deployed version. Capistrano works by
 putting each new release of your application in its own directory. When you
 deploy a new version, this task's job is to update the `current' symlink to
