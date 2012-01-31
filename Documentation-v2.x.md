@@ -1,1 +1,1 @@
-look, i can haz edit this!
+See [[Home]] for updated documentation.
