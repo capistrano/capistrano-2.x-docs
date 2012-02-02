@@ -1,1 +1,0 @@
-See [[Home]] for updated documentation.
