@@ -58,6 +58,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[play-capistrano|http://www.playframework.org/modules/capistrano]] For deploying/controlling remote Play Framework apps
   * [[capifony|http://capifony.org/]] For deploying symfony and Symfony2 apps
 
+  * [[capcake|https://github.com/jadb/capcake]] extension of Capistrano, deploy CakePHP apps
 ## 3rd Party Tutorials
 
 * Testing
