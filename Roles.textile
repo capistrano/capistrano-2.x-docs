@@ -8,7 +8,7 @@ h2. Populating Roles
 
 <pre>
 role :app, 'app1.example.com'
-role :app, ['app2.example.com', 'app3.example.com']
+role :app, 'app2.example.com', 'app3.example.com'
 role :web, 'web1.example.com'
 </pre>
 
@@ -25,7 +25,7 @@ The modifiers can be set in the following way:
 
 <pre>
 role :db, 'db1.example.com', :primary => true, :no_release => false
-role :db, %w{db2.example.com db3.example.com}, :no_release => true
+role :db, 'db2.example.com', 'db3.example.com', :no_release => true
 </pre>
 
 In the above example <code>db1</code> will receive the code during the checkout due to <code>:no_release => false</code> (which is the default, or a no-op at least if it's not true). Due to the <code>:primary => true</code> modifier the database migrations will be run here.
