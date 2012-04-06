@@ -71,7 +71,7 @@ OVERVIEW:
 ------------------------------------------------------------
 cap deploy:cold
 ------------------------------------------------------------
-Deploys and starts a `cold' application. This is useful if you have not deployed
+Deploys and starts a 'cold' application. This is useful if you have not deployed
 your application before, or if your application is (for some other reason) not
 currently running. It will deploy the code, run any pending migrations, and then
 instead of invoking `deploy:restart', it will invoke `deploy:start' to fire up
