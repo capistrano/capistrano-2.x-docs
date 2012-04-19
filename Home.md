@@ -59,6 +59,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[capifony|http://capifony.org/]] For deploying symfony and Symfony2 apps
   * [[capcake|https://github.com/jadb/capcake]] extension of Capistrano, deploy CakePHP apps
   * [[capistrano-deploytags|https://github.com/mydrive/capistrano-deploytags]] Track your current and all previous releases with Git tags automatically at deployment time
+  * [[capistrano-detect-migrations|https://github.com/mydrive/capistrano-detect-migrations]] Automatically discover and warn about pending Rails migrations with Git before you deploy
 ## 3rd Party Tutorials
 
 * Testing
