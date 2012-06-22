@@ -58,8 +58,10 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[play-capistrano|http://www.playframework.org/modules/capistrano]] For deploying/controlling remote Play Framework apps
   * [[capifony|http://capifony.org/]] For deploying symfony and Symfony2 apps
   * [[capcake|https://github.com/jadb/capcake]] extension of Capistrano, deploy CakePHP apps
+  * [[capistrano-chef|https://github.com/cramerdev/capistrano-chef]] Integrates Capistrano with Chef search
   * [[capistrano-deploytags|https://github.com/mydrive/capistrano-deploytags]] Track your current and all previous releases with Git tags automatically at deployment time
   * [[capistrano-detect-migrations|https://github.com/mydrive/capistrano-detect-migrations]] Automatically discover and warn about pending Rails migrations with Git before you deploy
+  * [[capistrano-notifier|https://github.com/cramerdev/capistrano-notifier]] Notify via mail and StatsD when deploying
   * [[capistrano-remote-cache-with-project-root|https://github.com/mcollina/capistrano-remote-cache-with-project-root]] Adds a new deployment strategy to deploy your app from an internal folder (non-root).
 
 ## 3rd Party Tutorials
