@@ -11,4 +11,4 @@ Successful use of Capistrano depends on a working knowledge of:
 * Rake (in, that we follow their structure of [[task definitions]])
 * Source control software
 
-*Next:* ["Getting Started":getting-started]
+*Next:* ["Getting Started":2.x-Getting-Started]
