@@ -1,1 +1,1 @@
-Why is this pointing to a new page?
+Please follow the [Wiki Pages](https://github.com/capistrano/capistrano/wiki).
