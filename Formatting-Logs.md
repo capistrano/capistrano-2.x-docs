@@ -1,6 +1,10 @@
-Capistrano comes with a set of default log formatters to colorize your log output. You can add your own custom log formatters by using the `format_logs` command in your `deploy.rb` file.
+Capistrano comes with a set of default log formatters to colorize your log output. If you want to disable all formatters, you can add the following line to your `deploy.rb` file:
 
-You can call `format_logs` multiple times, with either a hash or an array of hashes.
+```ruby
+disable_log_formatters
+```
+
+You can add your own custom log formatters by using the `format_logs` command in your `deploy.rb` file. You can call `format_logs` multiple times, with either a hash or an array of hashes.
 
 The options hash should have the following fields.
   
