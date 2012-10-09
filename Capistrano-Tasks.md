@@ -491,7 +491,9 @@ USAGE:
 
 LIFECYCLE:
  
-# Database Tasks (note: these tasks may not be present; check with `cap -T`)
+# Database Tasks 
+
+**note** these tasks may not be present in your version; check with `cap -T`
 
 ## db:backup
 
