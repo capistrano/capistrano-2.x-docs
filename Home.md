@@ -73,6 +73,8 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[Testing Capistrano with Cucumber|http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber]]
 * Other Software Packages
   * [[Drupal|http://tempe.st/2008/07/deploying-drupal-with-capistrano/]] 
+  * Magento
+    * [[http://www.designdisclosure.com/2012/04/deploy-magento-with-capistrano/]]
   * Wordpress
     * [[http://github.com/jestro/wordpress-capistrano/tree/master]]
     * [[http://whomwah.com/2006/05/21/deploying-wordpress-using-capistrano/]]
