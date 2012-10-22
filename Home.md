@@ -65,6 +65,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[capistrano-detect-migrations|https://github.com/mydrive/capistrano-detect-migrations]] Automatically discover and warn about pending Rails migrations with Git before you deploy
   * [[capistrano-notifier|https://github.com/cramerdev/capistrano-notifier]] Notify via mail and StatsD when deploying
   * [[capistrano-remote-cache-with-project-root|https://github.com/mcollina/capistrano-remote-cache-with-project-root]] Adds a new deployment strategy to deploy your app from an internal folder (non-root).
+  * [[magentify|https://github.com/alistairstead/Magentify]] Deployment recipes customised for deployment of Magento projects.
 
 ## 3rd Party Tutorials
 
