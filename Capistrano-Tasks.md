@@ -387,7 +387,7 @@ OVERVIEW:
 cap deploy:update
 ------------------------------------------------------------
 Copies your project and updates the symlink. It does this in a transaction, so
-that if either `update_code' or `symlink' fail, all changes made to the remote
+that if either `update_code' or `create_symlink' fail, all changes made to the remote
 servers will be rolled back, leaving your system in the same state it was in
 before `update' was invoked. Usually, you will want to call `deploy' instead of
 `update', but `update' can be handy if you want to deploy, but not immediately
