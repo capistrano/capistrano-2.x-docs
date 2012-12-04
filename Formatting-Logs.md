@@ -4,7 +4,7 @@ Capistrano comes with a set of default log formatters to colorize your log outpu
 disable_log_formatters
 ```
 
-You can add your own custom log formatters by using the `format_logs` command in your `deploy.rb` file. You can call `format_logs` multiple times, with either a hash or an array of hashes.
+You can add your own custom log formatters by using the `log_formatter` command in your `deploy.rb` file. You can call `log_formatter` multiple times, with either a hash or an array of hashes.
 
 The options hash should have the following fields.
   
@@ -56,7 +56,7 @@ log_formatters = [
   { :match => /^transaction: commit$/, :color => :magenta, :priority => 10, :style => :blink }
 ]
 
-format_logs(log_formatters)
+log_formatter(log_formatters)
 
-format_logs(:match => /git/, :color => :white, :priority => 20, :style => :reverse)
+log_formatter(:match => /git/, :color => :white, :priority => 20, :style => :reverse)
 ```
