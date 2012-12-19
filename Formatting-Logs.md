@@ -13,6 +13,7 @@ The options hash should have the following fields.
  * `:priority`  - What priority should this rule have (higher = more priority)
  * `:style`     - Special effect (:underline, :reverse, :blink)
  * `:level`     - Specify if this matcher should be bound to some of capistranos log levels (info,debug,...) 
+ * `:append`    - Text to be appended to the output
  * `:prepend`   - Text to be prepended to the output
  * `:replace`   - Text to replace the matched regular expression.
  * `:timestamp` - Show current time with the output
