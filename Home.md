@@ -71,7 +71,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 ## 3rd Party Tutorials
 
 * Testing
-  * [[Testing Capistrano with Cucumber|http://pivotallabs.com/users/jdean/blog/articles/763-testing-capistrano-recipes-with-cucumber]]
+  * [[Testing Capistrano with Cucumber|http://pivotallabs.com/testing-capistrano-recipes/]]
 * Other Software Packages
   * [[Drupal|http://tempe.st/2008/07/deploying-drupal-with-capistrano/]] 
   * Magento
