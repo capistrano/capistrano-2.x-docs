@@ -63,6 +63,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
   * [[capistrano-chef|https://github.com/cramerdev/capistrano-chef]] Integrates Capistrano with Chef search
   * [[capistrano-puppet|https://github.com/garethr/capistrano-puppet]] Integrates Capistrano with [[Puppet|http://puppetlabs.com/]] 
   * [[capistrano-deploytags|https://github.com/mydrive/capistrano-deploytags]] Track your current and all previous releases with Git tags automatically at deployment time
+  * [cap_git_tools|https://github.com/jrochkind/cap_git_tools] Another approach to automatically git tagging at deployment, guarding against deploying with uncommitted changes, multi-stage deployment with git, and other git tasks. 
   * [[capistrano-detect-migrations|https://github.com/mydrive/capistrano-detect-migrations]] Automatically discover and warn about pending Rails migrations with Git before you deploy
   * [[capistrano-notifier|https://github.com/cramerdev/capistrano-notifier]] Notify via mail and StatsD when deploying
   * [[capistrano-remote-cache-with-project-root|https://github.com/mcollina/capistrano-remote-cache-with-project-root]] Adds a new deployment strategy to deploy your app from an internal folder (non-root).
