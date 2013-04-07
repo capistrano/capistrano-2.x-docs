@@ -36,7 +36,7 @@ The options hash should have the following fields.
  * `:white`
 
 ### priority
-  `:priority` is an Integer defining the matchers priority.
+  `:priority` is an Integer defining the matcher's priority.
 
 ### style
  `:style` can have the following values:
