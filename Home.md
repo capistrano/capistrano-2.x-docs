@@ -11,7 +11,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 * [[Using Capistrano 2.x with Rails 2.x]]
 
 * [[Using Capistrano 2.x with Bundler|http://gembundler.com/v1.3/deploying.html]]
-* [[Using Capistrano 2.x with RVM|http://rvm.beginrescueend.com/integration/capistrano/]]
+* [[Using Capistrano 2.x with RVM|http://rvm.io/integration/capistrano/]]
 
 ## Intermediate Resources
 
