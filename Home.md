@@ -29,6 +29,7 @@ You may also want to read, and or contribute to the [[Capistrano handbook|http:/
 * [[Configuration Variables|2.x-Significant-Configuration-Variables]]
 * [[Capistrano Tasks]]
 * [[Formatting Logs]]
+* [[Upgrading to Rails 4]]
 
 ## Useful Background Knowledge (3rd Party Articles)
 
