@@ -1,5 +1,5 @@
 ## Asset Pipeline
-Due to an important change in the format and naming of the assets manifest file that sprockets generates in Rails 4, when you first precompile the assets for your newly upgraded Rails 4 application, Rails will ignore your Rails 3.x manifest and generate a new one. For other Capistrano tasks to work, there must only be one manifest in your assets directory (`shared/assets` by default).
+Due to an important change in the format and naming of the assets manifest file that Sprockets generates in Rails 4, when you first precompile the assets for your newly upgraded Rails 4 application, Sprockets will ignore your Rails 3.x manifest and generate a new one. For other Capistrano tasks to work, there must only be one manifest in your assets directory (`shared/assets` by default).
 
 This should be remedied immediately prior to deploying your updated application for the first time.
 
