@@ -70,6 +70,7 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
   * [[capistrano-notifier|https://github.com/cramerdev/capistrano-notifier]] Notify via mail and StatsD when deploying
   * [[capistrano-remote-cache-with-project-root|https://github.com/mcollina/capistrano-remote-cache-with-project-root]] Adds a new deployment strategy to deploy your app from an internal folder (non-root).
   * [[magentify|https://github.com/alistairstead/Magentify]] Deployment recipes customised for deployment of Magento projects.
+  * [[uberspacify|https://github.com/yeah/uberspacify]] Uberspacify helps you deploy a Ruby on Rails app on Uberspace, a popular shared hosting provider.
 
 ## 3rd Party Tutorials
 
