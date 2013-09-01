@@ -6,3 +6,22 @@ Here is a little background reading which is important. Archlinux's tutorial is 
 
 * ["SSH Key Tutorial at Archlinux":http://wiki.archlinux.org/index.php/Using_SSH_Keys]
 * If you are using windows, this is also invaluable. ["SSK keys with PuTTY Pagent":http://e-articles.info/e/a/title/How-to-use-PuTTY-Passphrase-Agents/]
+
+A simple setup may be as follows.
+
+1. Open a command line
+2. If you do not already have a public key, run `ssh-keygen -t rsa -b 4096`. This generates a public/private key pair.
+ * Press Enter to accept the default location the program suggests for your key
+ * Enter a password you can remember. This weak password will shield your heavy-duty private key from prying eyes.
+
+3. Run `ssh-copy-id REMOTE_USER_NAME@remote-server.org`. This copies your public key to the appropriate location on the server.
+4. Edit `~/.ssh/config` to append the following lines:
+
+<pre>
+Host remote-server.org
+HostName remote-server.org
+User REMOTE_USER_NAME
+</pre>
+
+Now, when you use Capistrano, it will use the SSH config file to find your username on the remote server and then connect using your public/private key pair. You only need to remember the shielding password you supplied above. On many systems, you only need to use the shielding password once and the system will keep the unwrapped password in memory with ssh-agent, or a similar utility.
+
