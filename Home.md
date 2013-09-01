@@ -71,6 +71,8 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
   * [[capistrano-remote-cache-with-project-root|https://github.com/mcollina/capistrano-remote-cache-with-project-root]] Adds a new deployment strategy to deploy your app from an internal folder (non-root).
   * [[magentify|https://github.com/alistairstead/Magentify]] Deployment recipes customised for deployment of Magento projects.
   * [[uberspacify|https://github.com/yeah/uberspacify]] Uberspacify helps you deploy a Ruby on Rails app on [[Uberspace|http://uberspace.de]], a popular shared hosting provider.
+  * [[Capistrano::Rsync|https://github.com/moll/capistrano-rsync]] Deploy with Rsync from any local (or remote) repository. Works (only) with the new [Capistrano v3](http://www.capistranorb.com/)!
+
 
 ## 3rd Party Tutorials
 
