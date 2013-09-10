@@ -82,6 +82,7 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
   * [[Drupal|http://tempe.st/2008/07/deploying-drupal-with-capistrano/]] 
   * Magento
     * [[http://www.designdisclosure.com/2012/04/deploy-magento-with-capistrano/]]
+    * [[https://github.com/diglin/Capistrano/tree/master/capistrano_presentation_hackathon2013]]
   * Wordpress
     * [[http://github.com/jestro/wordpress-capistrano/tree/master]]
     * [[http://whomwah.com/2006/05/21/deploying-wordpress-using-capistrano/]]
