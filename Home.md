@@ -72,7 +72,7 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
   * [[magentify|https://github.com/alistairstead/Magentify]] Deployment recipes customised for deployment of Magento projects.
   * [[uberspacify|https://github.com/yeah/uberspacify]] Uberspacify helps you deploy a Ruby on Rails app on [[Uberspace|http://uberspace.de]], a popular shared hosting provider.
   * [[Capistrano::Rsync|https://github.com/moll/capistrano-rsync]] Deploy with Rsync from any local (or remote) repository. Works (only) with the new [Capistrano v3](http://www.capistranorb.com/)!
-
+  * [[capistrano-conditional|https://github.com/deviantech/capistrano-conditional]] Adds support for conditionally running deployment tasks based on which files have been changed.
 
 ## 3rd Party Tutorials
 
