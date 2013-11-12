@@ -80,7 +80,9 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
 * Testing
   * [[Testing Capistrano with Cucumber|http://pivotallabs.com/testing-capistrano-recipes/]]
 * Other Software Packages
-  * [[Drupal|http://tempe.st/2008/07/deploying-drupal-with-capistrano/]] 
+  * Drupal
+    * [[http://tempe.st/2008/07/deploying-drupal-with-capistrano/]]
+    * [[Combining Capistrano and Drush for deploying Drupal websites|http://www.zodiacmedia.co.uk/blog/professional-deployment-of-websites-using-capistrano-part-4]]
   * Magento
     * [[http://www.designdisclosure.com/2012/04/deploy-magento-with-capistrano/]]
     * [[https://github.com/diglin/Capistrano/tree/master/capistrano_presentation_hackathon2013]]
@@ -95,6 +97,7 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
     * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
     * [[http://hivelogic.com/articles/deploying-expressionengine-github-capistrano]]
     * [[http://blog.servergrove.com/2011/09/07/deploying-symfony2-projects-on-shared-hosting-with-capifony]]
+    * [[Using Capistrano for deploying PHP and other none Rails based websites|http://www.zodiacmedia.co.uk/blog/professional-deployment-of-websites-using-capistrano-part-3]]
   * [[Any Non-Rails Project|http://github.com/leehambley/railsless-deploy/]]
 
 ## Seeking Assistance
