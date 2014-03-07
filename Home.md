@@ -95,12 +95,15 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
     * [[http://www.tractionco.com/blog/95-deploying-wordpress-with-capistrano-and-svn]]
     * [[http://theme.fm/2011/08/tutorial-deploying-wordpress-with-capistrano-2082/]]
     * [[https://github.com/herrkris/wordpress-capistrano]]
+  * Ezpublish
+    * [[https://github.com/alafon/alcapon]]
 * Other Languages / Frameworks
   * PHP
     * [[http://mathew-davies.co.uk/2009/10/28/php-deployment.html]]
     * [[http://hivelogic.com/articles/deploying-expressionengine-github-capistrano]]
     * [[http://blog.servergrove.com/2011/09/07/deploying-symfony2-projects-on-shared-hosting-with-capifony]]
     * [[Using Capistrano for deploying PHP and other none Rails based websites|http://www.zodiacmedia.co.uk/blog/professional-deployment-of-websites-using-capistrano-part-3]]
+    * [[https://github.com/everzet/capifony]]
   * [[Any Non-Rails Project|http://github.com/leehambley/railsless-deploy/]]
 
 ## Seeking Assistance
