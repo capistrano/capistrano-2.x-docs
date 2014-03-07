@@ -28,6 +28,8 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
 * DSL Documentation
   * [[Action Module|2.x-DSL-Documentation-Action-Module]] (`put()`, `get()`, `run()`, `stream()`, `capture()`, etc)
   * [[Configuration Module|2.x-DSL-Documentation-Configuration-Module]] (`namespace()`, `task()`, `set()`, `fetch()`, etc)
+  * [[Configuration Roles Role|2.x-DSL-Configuration-Roles-Role]]
+  * [[Configuration Roles Server|2.x-DSL-Configuration-Roles-Server]]
 * [[Configuration Variables|2.x-Significant-Configuration-Variables]]
 * [[Capistrano Tasks]]
 * [[Formatting Logs]]
