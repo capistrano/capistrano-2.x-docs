@@ -76,6 +76,7 @@ You may also want to read and/or contribute to the [[Capistrano handbook|http://
   * [[Capistrano::Rsync|https://github.com/moll/capistrano-rsync]] Deploy with Rsync from any local (or remote) repository. Works (only) with the new [Capistrano v3](http://www.capistranorb.com/)!
   * [[capistrano-conditional|https://github.com/deviantech/capistrano-conditional]] Adds support for conditionally running deployment tasks based on which files have been changed.
   * [[cap-elb|https://github.com/danmiley/cap-elb]] Deploy to AWS instance sets behind an Amazon ELB (load balancer).
+* [[capistrano-db-tasks|https://github.com/sgruhier/capistrano-db-tasks]] Useful DB and Assets tasks
 
 ## 3rd Party Tutorials
 
