@@ -1,4 +1,7 @@
-This is legacy documentation for Capistrano 2.x. For Capistrano 3.x, please refer to [[http://www.capistranorb.com/]].
+:warning::warning::warning: 
+
+# This is legacy documentation for Capistrano 2.x. For Capistrano 3.x, please refer to [[http://www.capistranorb.com/]].
+
 
 ## General Resources & Beginner Guides
 
